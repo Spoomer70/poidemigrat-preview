@@ -391,6 +391,39 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .wy-t{font-family:var(--fd);font-weight:var(--fdw);letter-spacing:var(--fdl);font-size:21px;line-height:1.2;margin:4px 0 0}
 .wy-p{margin:0;font-size:15px;line-height:1.55;font-weight:600;color:var(--ink2)}
 
+/* Фотостена: полароиды на цветном скотче */
+.life{position:relative;margin-top:64px}
+.life-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.life-hand{display:block;font-family:var(--fh);font-weight:700;font-size:27px;color:#EA2050;transform:rotate(-2deg);transform-origin:left bottom;margin-bottom:4px}
+.life-t{font-family:var(--fd);font-weight:var(--fdw);letter-spacing:var(--fdl);font-size:34px;line-height:1.15;margin:0}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 28px;padding:14px 8px 8px}
+.pol{position:relative;display:flex;flex-direction:column;gap:10px;padding:12px 12px 14px;background:#fff;border-radius:6px;box-shadow:0 20px 36px -20px rgba(42,18,53,.5),0 2px 6px rgba(42,18,53,.08);text-decoration:none;color:#5B2967;transform:rotate(var(--rot,0deg));transition:transform .45s cubic-bezier(.3,.7,.2,1),box-shadow .45s}
+.pol:hover{z-index:2;transform:rotate(0deg) translateY(-8px) scale(1.04);box-shadow:0 34px 54px -24px rgba(42,18,53,.55),0 2px 6px rgba(42,18,53,.08)}
+.pol:nth-child(even){margin-top:26px}
+.pol-img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;background:#F3E8F8}
+.pol-cap{font-family:var(--fh);font-weight:700;font-size:23px;line-height:1.1;text-align:center;color:#5B2967}
+.pol-tape{position:absolute;z-index:1;left:50%;top:-13px;width:88px;height:26px;translate:-50% 0;rotate:var(--tr,-4deg);background:var(--tape,rgba(234,32,80,.5));border-radius:2px;box-shadow:0 2px 5px rgba(42,18,53,.1)}
+.pol:nth-child(8n+1){--rot:-3deg;--tape:rgba(234,32,80,.5);--tr:-6deg}
+.pol:nth-child(8n+2){--rot:2deg;--tape:rgba(92,191,204,.62);--tr:4deg}
+.pol:nth-child(8n+3){--rot:-1.5deg;--tape:rgba(250,151,34,.58);--tr:-2deg}
+.pol:nth-child(8n+4){--rot:3deg;--tape:rgba(148,183,7,.55);--tr:5deg}
+.pol:nth-child(8n+5){--rot:1.5deg;--tape:rgba(158,91,177,.5);--tr:-5deg}
+.pol:nth-child(8n+6){--rot:-2.5deg;--tape:rgba(250,151,34,.58);--tr:3deg}
+.pol:nth-child(8n+7){--rot:2.5deg;--tape:rgba(234,32,80,.5);--tr:-3deg}
+.pol:nth-child(8n+8){--rot:-2deg;--tape:rgba(92,191,204,.62);--tr:6deg}
+@media (max-width:960px){
+.wall{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:22px 6px 26px;margin:0 -6px}
+.wall::-webkit-scrollbar{display:none}
+.pol{flex:0 0 36%;scroll-snap-align:center}
+.pol:nth-child(even){margin-top:0}
+}
+@media (max-width:640px){
+.life{margin-top:44px}
+.life-t{font-size:26px}
+.pol{flex-basis:64%}
+.pol-cap{font-size:21px}
+}
+
 .row-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .arrows{display:flex;gap:10px}
 .arw{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;margin:0;padding:0;border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.72);color:var(--ink);cursor:pointer;box-shadow:0 10px 24px -16px rgba(91,41,103,.5);transition:transform .2s,background .2s}
@@ -403,7 +436,10 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .tm-blob{position:absolute;width:190px;height:190px;border-radius:42% 58% 63% 37% / 41% 44% 56% 59%;background:rgba(255,255,255,.24);animation:morph 9s ease-in-out infinite}
 @keyframes morph{0%,100%{border-radius:42% 58% 63% 37% / 41% 44% 56% 59%;transform:rotate(0)}50%{border-radius:61% 39% 38% 62% / 55% 61% 39% 45%;transform:rotate(28deg)}}
 .tm-in{position:relative;font-family:var(--fd);font-weight:var(--fdw);font-size:60px;color:#fff;letter-spacing:-.03em}
-.tm-lbl{position:absolute;left:14px;bottom:12px;padding:5px 10px;border-radius:99px;background:rgba(42,18,53,.42);color:#fff;font-size:12px;font-weight:800}
+.tm-lbl{position:absolute;z-index:1;left:14px;bottom:12px;display:inline-flex;align-items:center;gap:5px;padding:5px 11px 5px 8px;border-radius:99px;background:rgba(42,18,53,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font-size:12px;font-weight:800}
+.tm-lbl .i{width:13px;height:13px;fill:#fff;stroke:none}
+.tm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform .6s cubic-bezier(.3,.7,.2,1)}
+.tm:hover .tm-img{transform:scale(1.05)}
 .tm-b{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
 .tm-n{display:block;font-size:18px;font-weight:900;line-height:1.25}
 .tm-r{display:block;font-size:14px;font-weight:700;color:var(--ink2)}
@@ -1179,6 +1215,15 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <p class="wy-p">Чтение, творчество, подготовка к саду и школе — легко и весело, через игру.</p>
 </div>
 </div>
+<div class="life reveal">
+<div class="life-head">
+<div><span class="life-hand">живые кадры из центра</span><h3 class="life-t">Так проходят наши дни</h3></div>
+<a class="btn btn-g btn-sm" href="https://vk.ru/albums-208735857" target="_blank" rel="noopener">Больше 20 000 фото во ВКонтакте<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+</div>
+<div class="wall">
+<sc-for list="{{album}}" as="ph" hint-placeholder-count="8"><a class="pol" href="{{ph.url}}" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="{{ph.src}}" alt="{{ph.alt}}" loading="lazy"><span class="pol-cap">{{ph.cap}}</span></a></sc-for>
+</div>
+</div>
 </div>
 </section>
 
@@ -1197,7 +1242,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="team" ref="{{teamRef}}" data-row="team">
 <sc-for list="{{team}}" as="p" hint-placeholder-count="4">
 <a class="tm glass" href="{{p.url}}" target="_blank" rel="noopener">
-<span class="tm-ph" style="background: {{p.g}}"><span class="tm-blob"></span><span class="tm-in">{{p.ini}}</span><span class="tm-lbl">фото педагога</span></span>
+<span class="tm-ph" style="background: {{p.g}}"><img class="tm-img" src="{{p.ph}}" alt="{{p.n}}" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
 <span class="tm-b">
 <span class="tm-n">{{p.n}}</span>
 <span class="tm-r">{{p.r}}</span>
@@ -1207,9 +1252,9 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 </a>
 </sc-for>
 <a class="tm tm-all" href="https://poidemigrat.ru/" target="_blank" rel="noopener">
-<span class="tm-in" style="font-size: 56px">+7</span>
-<span class="tm-n">Ещё 7 педагогов</span>
-<span class="tm-r" style="color: rgba(255,255,255,.88)">Знакомьтесь со всей командой на сайте</span>
+<span class="tm-in" style="font-size: 56px">14</span>
+<span class="tm-n">Вся команда на сайте</span>
+<span class="tm-r" style="color: rgba(255,255,255,.88)">Видео-знакомства и подробности о каждом педагоге</span>
 </a>
 </div>
 <p class="fine">*Все данные сотрудников размещены с их согласия</p>
@@ -1561,13 +1606,20 @@ class Component extends DCLogic {
     ];
     const msgs = [{ id: 'call', n: 'Позвонить' }, { id: 'max', n: 'MAX' }, { id: 'tg', n: 'Telegram' }];
     const team = [
-      { n: 'Виктория Владимировна Миллер', r: 'Руководитель центра', t: ['«Малыш и мама»'], u: '/miller', g: 'linear-gradient(150deg, #FF9AC6, #B04CB8)' },
-      { n: 'Анастасия Денисовна Буланцева', r: 'Методист и администратор', t: ['Подготовка к школе', 'Чтение', 'Каллиграфия'], u: '/bulantseva', g: 'linear-gradient(150deg, #C99AD8, #7B3A93)' },
-      { n: 'Валерия Викторовна Кустова', r: 'Логопед центра', t: ['«Говорилка»', '«Я сам»'], u: '/kustova', g: 'linear-gradient(150deg, #93C5FD, #2563EB)' },
-      { n: 'Ирина Николаевна Цецулина', r: 'Творческие направления', t: ['ИЗО', 'Лепка', 'Продлёнка'], u: '/tsetsulina', g: 'linear-gradient(150deg, #FDBA74, #EA580C)' },
-      { n: 'Екатерина Максимовна Морозова', r: 'Подготовка к школе и начальные классы', t: ['Чтение', 'Финграмотность', 'Продлёнка'], u: '/morozova', g: 'linear-gradient(150deg, #6EE7B7, #059669)' },
-      { n: 'Екатерина Сергеевна Осадчева', r: 'Комплексные занятия 3–4 года', t: ['Скорочтение', 'Каллиграфия', 'Репетитор'], u: '/osadcheva', g: 'linear-gradient(150deg, #F9A8D4, #EA2050)' },
-      { n: 'Милана Эльхановна Аникина', r: 'Педагог сенсорики', t: ['«Я сам»', 'Сенсорное развитие'], u: '/anikina', g: 'linear-gradient(150deg, #5EEAD4, #0E7490)' }
+      { n: 'Виктория Владимировна Миллер', r: 'Руководитель центра', t: ['«Малыш и мама»'], u: '/miller', g: 'linear-gradient(150deg, #FF9AC6, #B04CB8)', ph: 'team/miller.jpg' },
+      { n: 'Анастасия Денисовна Буланцева', r: 'Методист и администратор', t: ['Подготовка к школе', 'Чтение', 'Каллиграфия'], u: '/bulantseva', g: 'linear-gradient(150deg, #C99AD8, #7B3A93)', ph: 'team/bulantseva.jpg' },
+      { n: 'Гюнель Гасильевна Алыева', r: 'Администратор', t: ['Театральная студия', 'Хореография'], u: '/alyieva', g: 'linear-gradient(150deg, #FDBA74, #EA580C)', ph: 'team/alyieva.jpg' },
+      { n: 'Екатерина Максимовна Морозова', r: 'Подготовка к школе и начальные классы', t: ['Чтение', 'Финграмотность', 'Продлёнка'], u: '/morozova', g: 'linear-gradient(150deg, #6EE7B7, #059669)', ph: 'team/morozova.jpg' },
+      { n: 'Валерия Викторовна Кустова', r: 'Логопед центра', t: ['«Говорилка»', '«Я сам»'], u: '/kustova', g: 'linear-gradient(150deg, #93C5FD, #2563EB)', ph: 'team/kustova.jpg' },
+      { n: 'Светлана Юрьевна Рябец', r: 'Группа кратковременного пребывания', t: ['«Я сам»'], u: '/ryabets', g: 'linear-gradient(150deg, #F9A8D4, #EA2050)', ph: 'team/ryabets.jpg' },
+      { n: 'Ирина Николаевна Цецулина', r: 'Творческие направления', t: ['ИЗО', 'Лепка', 'Продлёнка'], u: '/tsetsulina', g: 'linear-gradient(150deg, #FDBA74, #EA580C)', ph: 'team/tsetsulina.jpg' },
+      { n: 'Екатерина Сергеевна Осадчева', r: 'Комплексные занятия 3–4 года', t: ['Скорочтение', 'Каллиграфия', 'Репетитор'], u: '/osadcheva', g: 'linear-gradient(150deg, #F9A8D4, #EA2050)', ph: 'team/osadcheva.jpg' },
+      { n: 'Татьяна Владимировна Постнова', r: 'Оздоровительная гимнастика', t: ['Осанка', 'Гимнастика'], u: '/postnova', g: 'linear-gradient(150deg, #6EE7B7, #059669)', ph: 'team/postnova.jpg' },
+      { n: 'Екатерина Павловна Ромашова', r: 'Музыкальные занятия', t: ['«Живые нотки»', 'Музыкальная азбука'], u: '/romashova', g: 'linear-gradient(150deg, #C99AD8, #7B3A93)', ph: 'team/romashova.jpg' },
+      { n: 'Виктория Юрьевна Седлецкая', r: 'Логопед центра', t: ['Речь'], u: '/sedletskaya', g: 'linear-gradient(150deg, #93C5FD, #2563EB)', ph: 'team/sedletskaya.jpg' },
+      { n: 'Алена Андреевна Кованская', r: 'Логопед центра', t: ['Речь'], u: '/kovanskaya', g: 'linear-gradient(150deg, #5EEAD4, #0E7490)', ph: 'team/kovanskaya.jpg' },
+      { n: 'Наталья Сергеевна Манабаева', r: 'Мастер кулинарных шедевров', t: ['Кухня центра'], u: '/manabaeva', g: 'linear-gradient(150deg, #FDBA74, #EA580C)', ph: 'team/manabaeva.jpg' },
+      { n: 'Милана Эльхановна Аникина', r: 'Педагог сенсорики', t: ['«Я сам»', 'Сенсорное развитие'], u: '/anikina', g: 'linear-gradient(150deg, #5EEAD4, #0E7490)', ph: 'team/anikina.jpg' }
     ];
     const reviews = [
       { n: 'Екатерина', s: 'о летнем лагере', t: 'Летний лагерь в этом центре — спасение для школьников Северного парка! Походы, мастер-классы, экскурсии, квесты. Думали взять на 2 недели, а продляли уже 2 раза — ребёнок каждое утро бежит с удовольствием!' },
@@ -1578,7 +1630,18 @@ class Component extends DCLogic {
       { n: 'Анна С.', s: 'об адаптации малышей', t: 'Лучший центр для детей! Грамотный подход к организации досуга и правильное решение для адаптации малышей. Очень рекомендую!' }
     ];
     const avg = ['linear-gradient(135deg, #FF8FC4, #EA2050)', 'linear-gradient(135deg, #C99AD8, #7B3A93)', 'linear-gradient(135deg, #FDBA74, #EA580C)', 'linear-gradient(135deg, #93C5FD, #2563EB)', 'linear-gradient(135deg, #6EE7B7, #059669)', 'linear-gradient(135deg, #F0ABFC, #B83A8C)'];
-    this._d = { I, A, CI, tasks, courses, bands, chars, whens, fmts, msgs, team, reviews, avg };
+    const V = (id) => 'https://vk.ru/photo-208735857_' + id;
+    const album = [
+      { src: 'photos/vk_457245913.jpg', cap: 'творческий мастер-класс', alt: 'Девочка показывает поделку с творческого мастер-класса', url: V('457245913') },
+      { src: 'photos/vk_457243404.jpg', cap: 'сказка для малышей и мам', alt: 'Мамы с малышами на интерактивном спектакле', url: V('457243404') },
+      { src: 'photos/vk_457242137.jpg', cap: 'кулинарный мастер-класс', alt: 'Дети раскатывают тесто и вырезают пряники', url: V('457242137') },
+      { src: 'photos/vk_457239399.jpg', cap: '«Малыш и мама»', alt: 'Малышка на занятии «Малыш и мама»', url: V('457239399') },
+      { src: 'photos/vk_457248290.jpg', cap: 'праздник со сказочными героями', alt: 'Дети с аниматорами на празднике', url: V('457248290') },
+      { src: 'photos/vk_457239298.jpg', cap: 'играем и знакомимся', alt: 'Малыши играют с мячиками', url: V('457239298') },
+      { src: 'photos/vk_457248297.jpg', cap: 'праздник в народных костюмах', alt: 'Девочка в кокошнике на празднике в центре', url: V('457248297') },
+      { src: 'photos/vk_457239593.jpg', cap: 'сенсорные игры с мамой', alt: 'Мамы и малыши играют с сенсорной коробкой', url: V('457239593') }
+    ];
+    this._d = { I, A, CI, tasks, courses, bands, chars, whens, fmts, msgs, team, reviews, avg, album };
     return this._d;
   }
 
@@ -1931,7 +1994,7 @@ class Component extends DCLogic {
 
     const team = D.team.map((p) => {
       const w = p.n.split(' ');
-      return { n: p.n, r: p.r, g: p.g, url: 'https://poidemigrat.ru' + p.u, ini: w[0].charAt(0) + w[w.length - 1].charAt(0), tags: p.t.map((x) => ({ x: x })) };
+      return { n: p.n, r: p.r, g: p.g, ph: p.ph, url: 'https://poidemigrat.ru' + p.u, ini: w[0].charAt(0) + w[w.length - 1].charAt(0), tags: p.t.map((x) => ({ x: x })) };
     });
     const reviews = D.reviews.map((r, i) => ({ n: r.n, s: r.s, t: r.t, i: r.n.charAt(0), g: D.avg[i % D.avg.length] }));
 
@@ -1973,7 +2036,7 @@ class Component extends DCLogic {
       qRestart: () => this.qPatch({ step: 1, char: '', when: [], fmt: 'any', sent: false }, true),
       qToSelf: () => this.setMode('self'),
       qSend: () => this.qPatch({ sent: true }),
-      team: team, reviews: reviews,
+      team: team, reviews: reviews, album: D.album,
       teamPrev: () => this.scrollTeam(-1), teamNext: () => this.scrollTeam(1),
       formAge: age + ' ' + yrs(age),
       sent: !!s.sent, notSent: !s.sent,
