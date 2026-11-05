@@ -320,8 +320,8 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .res-n{background:linear-gradient(100deg,#7B3A93,#B04CB8);-webkit-background-clip:text;background-clip:text;color:transparent}
 .res-s{font-size:15px;font-weight:700;color:var(--ink2);margin-top:6px}
 .legend{display:flex;gap:8px 18px;align-items:center;font-size:13px;font-weight:700;color:var(--ink2);flex-wrap:wrap}
-.lg{display:inline-flex;align-items:center;gap:8px}
-.lg-dot{width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid #2A1235;box-sizing:border-box}
+.lgd{display:inline-flex;align-items:center;gap:8px}
+.lg-dot{flex:none;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid #2A1235;box-sizing:border-box}
 .lg-bar{width:28px;height:8px;border-radius:99px;background:linear-gradient(90deg,#9E5BB1,#B04CB8)}
 .plan{position:relative;display:flex;flex-direction:column;gap:14px;margin:0 0 22px;padding:22px 24px;border-radius:26px;background:linear-gradient(120deg,rgba(158,91,177,.11),rgba(219,39,119,.08));border:1.5px solid rgba(158,91,177,.22);animation:enter .5s cubic-bezier(.3,.7,.2,1) backwards}
 .plan-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -727,6 +727,43 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .why-masc{width:92px;bottom:auto;top:-18px}
 .art-lg{width:64px;height:64px}
 }
+
+/* Возраст ещё не выбран: пустая лесенка, мягкая подсветка цифр и подсказка вместо результатов */
+.mpos.mhide{opacity:0;visibility:hidden}
+.wait > button.age-l{animation:agePing 2.6s ease-in-out infinite}
+@keyframes agePing{0%,100%{box-shadow:inset 0 0 0 1px rgba(91,41,103,.1),0 0 0 0 rgba(158,91,177,0)}50%{box-shadow:inset 0 0 0 1px rgba(158,91,177,.45),0 0 0 5px rgba(158,91,177,.14)}}
+.still .wait > button.age-l{animation:none}
+.pick-first{display:flex;align-items:center;gap:18px;margin-top:26px;padding:20px 24px;border-radius:24px;background:rgba(158,91,177,.06);border:2px dashed rgba(158,91,177,.3)}
+.pf-masc{flex:none;width:84px;height:auto;animation:mbob 3.4s ease-in-out infinite}
+.pf-t{font-family:var(--fd);font-weight:var(--fdw);letter-spacing:var(--fdl);font-size:23px;line-height:1.2}
+.pf-p{margin:4px 0 0;font-size:15px;line-height:1.5;font-weight:600;color:var(--ink2)}
+.still .pf-masc{animation:none}
+
+/* Карточки занятий: на телефоне свёрнуты в строку, раскрываются по нажатию */
+.card-tg,.cage{display:none}
+@media (max-width:640px){
+.grid{gap:10px}
+.card{position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 46px 12px 12px;border-radius:20px}
+.card:hover{transform:none}
+.card-tg{display:block;position:absolute;z-index:1;left:0;right:0;top:0;bottom:0;margin:0;padding:0;border:0;border-radius:20px;background:transparent;cursor:pointer;color:#7B3A93}
+.card-tg .i{position:absolute;right:14px;top:34px;width:20px;height:20px;transition:transform .35s cubic-bezier(.3,.7,.2,1)}
+.card-sc{grid-column:1;grid-row:1 / span 3;width:72px;height:64px;object-fit:cover;object-position:36% 50%;border-radius:14px}
+.card:hover .card-sc{transform:none}
+.card-top{grid-column:2;min-width:0}
+.card-top > .fmt{display:none}
+.card-t{grid-column:2;margin:0;font-size:16px;line-height:1.2}
+.cage{display:block;grid-column:2;font-size:13px;font-weight:800;color:var(--ink2)}
+.card-d,.card > .mt,.card > .ab,.card-f{display:none;grid-column:1 / -1}
+.card.open .card-tg{bottom:auto;height:88px}
+.card.open .card-tg .i{transform:rotate(180deg)}
+.card.open .card-d{display:block;margin-top:12px}
+.card.open > .mt{display:flex;margin-top:8px}
+.card.open > .ab{display:flex;margin-top:10px}
+.card.open .card-f{display:flex;margin-top:10px}
+.pick-first{flex-direction:column;text-align:center;gap:10px;padding:18px 16px}
+.pf-masc{width:70px}
+.pf-t{font-size:20px}
+}
 </style>
 <style>:root{color-scheme:light}html,body{background:#FBF6FF}.intro-seen .splash{display:none}.intro-seen .intro .lg-h{--lg0:.2s}.intro-seen .intro .hc-svg{--lg0:.1s}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ChildCare","@id":"https://poidemigrat.ru/#center","name":"Детский центр «Пойдём играть»","alternateName":"Пойдём играть","description":"Развивающие занятия для детей от 1 года до 10 лет в Северном парке (Томск): подготовка к саду и школе, логопед, чтение, творчество, музыка, гимнастика, продлёнка и каникулы. Подберите занятия по возрасту онлайн.","url":"https://poidemigrat.ru/","logo":"https://spoomer70.github.io/poidemigrat-preview/apple-touch-icon.png","image":"https://spoomer70.github.io/poidemigrat-preview/og-image.jpg","telephone":"+7-995-913-79-09","email":"poidemm.igrat@yandex.ru","foundingDate":"2021","address":{"@type":"PostalAddress","streetAddress":"ул. Марины Цветаевой, 4","addressLocality":"д. Кисловка, мкр. Северный парк","addressRegion":"Томская область","addressCountry":"RU"},"areaServed":[{"@type":"City","name":"Томск"},{"@type":"Place","name":"Северный парк"}],"sameAs":["https://vk.com/poidem_igrat","https://t.me/poidemigrat","https://2gis.ru/tomsk/firm/70000001059170402"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Развивающие занятия для детей от 1 года до 10 лет","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Я сам»","description":"Группа кратковременного пребывания: учимся самостоятельности через игры, творчество и сенсорику","url":"https://poidemigrat.ru/ya-sam","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Малыш и мама»","description":"Социализируемся и мягко готовимся к детскому саду","url":"https://poidemigrat.ru/malysh-i-mama","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Живые нотки»","description":"Развиваемся через музыку","url":"https://poidemigrat.ru/zhivye-notki","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Говорилка»","description":"Курс развития речи для малышей","url":"https://poidemigrat.ru/govorilka","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Сенсорное развитие","description":"Играем и познаём мир","url":"https://poidemigrat.ru/sensornoe-razvitie","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Логопед","description":"Запускаем и корректируем речь","url":"https://poidemigrat.ru/logoped","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Творчество для малышей","description":"ИЗО и лепка: рисуем, лепим, познаём мир","url":"https://poidemigrat.ru/lepka-25-4-let","audience":{"@type":"PeopleAudience","suggestedMinAge":2.5,"suggestedMaxAge":4}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Музыкальная азбука","description":"Учим азбуку через музыку","url":"https://poidemigrat.ru/azbuka-3-5","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Группа выходного дня","description":"Займём детей на выходных","url":"https://poidemigrat.ru/gruppa-vihodnogo-dnya-3-6-let","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Комплексное занятие 3–4 года","description":"Всестороннее развитие в одном занятии","url":"https://poidemigrat.ru/kompleks-3-4","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":4}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Комплексное занятие 4–5 лет","description":"Всестороннее развитие в одном занятии","url":"https://poidemigrat.ru/kompleks-4-5","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Оздоровительная гимнастика","description":"Формируем здоровую осанку у дошкольников","url":"https://poidemigrat.ru/ozdorovitelnaya-gimnastika","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ИЗО","description":"Рисуем и познаём мир","url":"https://poidemigrat.ru/izo-35-5-let","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Легоконструирование","description":"Конструируем из лего","url":"https://poidemigrat.ru/legokonstruirovanie","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Логопед, дефектолог, логомассаж","description":"Корректируем речь","url":"https://poidemigrat.ru/logopedicheskiy-massaj-logoped","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Лепка","description":"Лепим и развиваем моторику рук","url":"https://poidemigrat.ru/lepka-4-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Обучение чтению в группе","description":"Учим азбуку играючи","url":"https://poidemigrat.ru/obuchenie-chteniu-4-8-let-gruppa","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Обучение чтению индивидуально","description":"Учим азбуку играючи","url":"https://poidemigrat.ru/obuchenie-chteniu-4-8-let-individualno","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к школе · 1 ступень","description":"Готовимся к школе","url":"https://poidemigrat.ru/podgotovka-shkola-5-6-let","audience":{"@type":"PeopleAudience","suggestedMinAge":5,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ПДД","description":"Правила дорожного движения — подготовительная группа","url":"https://poidemigrat.ru/pdd-5-6","audience":{"@type":"PeopleAudience","suggestedMinAge":5,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к школе · 2 ступень","description":"Подготовка к выходу в школу","url":"https://poidemigrat.ru/podgotovka-shkola-6-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Экспресс-подготовка к школе","description":"Набор три раза в год: в январе, апреле и июне","url":"https://poidemigrat.ru/express-podgotovka-shkola-6-7-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ИЗО","description":"Художественное творчество: учимся изображать окружающий мир","url":"https://poidemigrat.ru/izo-6-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Оздоровительная гимнастика","description":"Для дошкольников и младших школьников","url":"https://poidemigrat.ru/ozdorovitelnaya-gimnastika-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Группа выходного дня","description":"Займём детей на выходных","url":"https://poidemigrat.ru/gruppa-vihodnogo-dnya-6-10-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каникулярная площадка","description":"Весёлые каникулы для школьников в центре","url":"https://poidemigrat.ru/kanikulyrnaz-ploshadka","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Финансовая грамотность","description":"Учимся обращаться с деньгами","url":"https://poidemigrat.ru/finansovaya-gramotnost-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Курс по шитью","description":"Настоящий швейный курс: ребёнок научится шить готовые изделия","url":"https://poidemigrat.ru/kurs-po-shityu-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Вспомнить всё»","description":"Новый курс в центре «Пойдём играть»","url":"https://poidemigrat.ru/vspomnit-vse","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Продлёнка","description":"С 12:30 до 18:00 — делаем уроки и весело проводим время. Пятидневка или выборочные дни","url":"https://poidemigrat.ru/prodlenka-smena-1","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ПДД","description":"Правила дорожного движения — школьная группа","url":"https://poidemigrat.ru/pdd-7-9","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":9}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Репетитор начальных классов","description":"Помощь с математикой и русским языком","url":"https://poidemigrat.ru/repetitor","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каллиграфия","description":"Учимся писать красиво","url":"https://poidemigrat.ru/kalligrafia-8","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каллиграфия в мини-группе","description":"Красивый почерк в небольшой компании","url":"https://poidemigrat.ru/kalligrafia-8-mini-gruppa","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Скорочтение","description":"Читать быстрее, понимать больше, успевать больше","url":"https://poidemigrat.ru/skorochtenie-8","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Таблица умножения","description":"Курс для школьников","url":"https://poidemigrat.ru/tablitsa-umnojeniya","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к ВПР","description":"Для учеников 4-х классов","url":"https://poidemigrat.ru/podgotovka-vpr","audience":{"@type":"PeopleAudience","suggestedMinAge":9,"suggestedMaxAge":10}}}]}},{"@type":"WebSite","@id":"https://poidemigrat.ru/#site","url":"https://poidemigrat.ru/","name":"Пойдём играть","inLanguage":"ru-RU","publisher":{"@id":"https://poidemigrat.ru/#center"}}]}</script>
@@ -903,358 +940,39 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="step"><span class="step-n">1</span><h3 class="step-t">Сколько лет ребёнку?</h3></div>
 <p class="step-h">Нажмите на кубик или на цифру — лесенка подрастёт вместе с ребёнком</p>
 <div class="bars">
-<button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 22px;"><span class="b3-t" style="top: -4px; transform: rotateX(90deg) translateZ(11px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 36px;"><span class="b3-t" style="top: 3px; transform: rotateX(90deg) translateZ(18px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 50px;"><span class="b3-t" style="top: 10px; transform: rotateX(90deg) translateZ(25px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on sel" style="height: 64px;"><span class="b3-t" style="top: 17px; transform: rotateX(90deg) translateZ(32px); background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 78px;"><span class="b3-t" style="top: 24px; transform: rotateX(90deg) translateZ(39px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 92px;"><span class="b3-t" style="top: 31px; transform: rotateX(90deg) translateZ(46px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 106px;"><span class="b3-t" style="top: 38px; transform: rotateX(90deg) translateZ(53px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 120px;"><span class="b3-t" style="top: 45px; transform: rotateX(90deg) translateZ(60px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 134px;"><span class="b3-t" style="top: 52px; transform: rotateX(90deg) translateZ(67px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 148px;"><span class="b3-t" style="top: 59px; transform: rotateX(90deg) translateZ(74px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button>
-<div class="mpos" style="left: calc(35% - 1.2px); bottom: 72px;">
+<button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 22px;"><span class="b3-t" style="top: -4px; transform: rotateX(90deg) translateZ(11px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 36px;"><span class="b3-t" style="top: 3px; transform: rotateX(90deg) translateZ(18px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 50px;"><span class="b3-t" style="top: 10px; transform: rotateX(90deg) translateZ(25px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 64px;"><span class="b3-t" style="top: 17px; transform: rotateX(90deg) translateZ(32px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 78px;"><span class="b3-t" style="top: 24px; transform: rotateX(90deg) translateZ(39px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 92px;"><span class="b3-t" style="top: 31px; transform: rotateX(90deg) translateZ(46px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 106px;"><span class="b3-t" style="top: 38px; transform: rotateX(90deg) translateZ(53px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 120px;"><span class="b3-t" style="top: 45px; transform: rotateX(90deg) translateZ(60px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 134px;"><span class="b3-t" style="top: 52px; transform: rotateX(90deg) translateZ(67px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 148px;"><span class="b3-t" style="top: 59px; transform: rotateX(90deg) translateZ(74px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button>
+<div class="mpos mhide" style="left: calc(35% - 1.2px); bottom: 72px;">
 <div class="masc hopA">
 <div class="m-tip"><span>4 года</span></div>
 <img class="masc-img" src="art/m_stand.svg" alt="" width="64" height="74">
 </div>
 </div>
 </div>
-<div class="ages ages-grid" data-row="age" role="group" aria-label="Возраст ребёнка">
-<div class="bead" aria-hidden="true" style="border-radius: 16px; inset: 0px 661px 0px 331px; opacity: 1; transition: none;">
-<div class="bead-ghost ages-grid" style="left: -331px; top: 0px; width: 1094px; height: 58px; transition: none;">
+<div class="ages ages-grid wait" data-row="age" role="group" aria-label="Возраст ребёнка">
+<div class="bead" aria-hidden="true" style="border-radius: 16px; inset: 0px; opacity: 0; transition: none;">
+<div class="bead-ghost ages-grid" style="left: 0px; top: 0px; width: 0px; height: 0px; transition: none;">
 <span class="age-l age-g"><span class="age-n"><span>1</span></span><span class="age-u"><span>год</span></span></span><span class="age-l age-g"><span class="age-n"><span>2</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>3</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>4</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>5</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>6</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>7</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>8</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>9</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>10</span></span><span class="age-u"><span>лет</span></span></span>
 </div>
 </div>
-<button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>1</span></span><span class="age-u"><span>год</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>2</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>3</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="1" aria-pressed="true"><span class="age-n"><span>4</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>5</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>6</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>7</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>8</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>9</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>10</span></span><span class="age-u"><span>лет</span></span></button>
+<button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>1</span></span><span class="age-u"><span>год</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>2</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>3</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>4</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>5</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>6</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>7</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>8</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>9</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>10</span></span><span class="age-u"><span>лет</span></span></button>
 </div>
 <div class="bands">
 <button class="band " type="button" style="grid-column: 1 / 4;"><span class="band-line" style="background: linear-gradient(90deg, rgb(255, 143, 170), rgb(238, 74, 120));"></span><span class="band-n">Малыши</span><span class="band-s">1–3 года</span></button>
-<button class="band on" type="button" style="grid-column: 4 / 7;"><span class="band-line" style="background: linear-gradient(90deg, rgb(255, 192, 105), rgb(250, 151, 34));"></span><span class="band-n">Дошкольники</span><span class="band-s">4–6 лет</span></button>
+<button class="band " type="button" style="grid-column: 4 / 7;"><span class="band-line" style="background: linear-gradient(90deg, rgb(255, 192, 105), rgb(250, 151, 34));"></span><span class="band-n">Дошкольники</span><span class="band-s">4–6 лет</span></button>
 <button class="band " type="button" style="grid-column: 7 / 11;"><span class="band-line" style="background: linear-gradient(90deg, rgb(142, 214, 223), rgb(79, 179, 194));"></span><span class="band-n">Школьники</span><span class="band-s">7–10 лет · 1–4 класс</span></button>
 </div>
-<div class="tip"><span class="tip-i"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg></span><span><span>К школе готовимся по ступеням: комплексные занятия в 3–5 лет, затем подготовка к школе — 1 ступень (5–6 лет) и 2 ступень (6–7 лет).</span></span></div>
+<div class="tip"><span class="tip-i"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg></span><span><span>Нажмите на возраст ребёнка — ниже появятся задачи и подходящие занятия.</span></span></div>
 
-<div class="divider"></div>
 
-<div class="step"><span class="step-n">2</span><h3 class="step-t">Какие задачи решаем?</h3></div>
-<p class="step-h">Отметьте одну или несколько — подберём занятия, которые закрывают сразу несколько задач</p>
-<div class="chips" role="group" aria-label="Задачи для ребёнка">
-<button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/speech.svg" alt="" width="30" height="30"><span class="chip-l"><span>Речь</span></span><span class="chip-c"><span>3</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/kg.svg" alt="" width="30" height="30"><span class="chip-l"><span>Подготовка к саду</span></span><span class="chip-c"><span>0</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/school.svg" alt="" width="30" height="30"><span class="chip-l"><span>Подготовка к школе</span></span><span class="chip-c"><span>4</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/read.svg" alt="" width="30" height="30"><span class="chip-l"><span>Чтение и письмо</span></span><span class="chip-c"><span>3</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/art.svg" alt="" width="30" height="30"><span class="chip-l"><span>Творчество</span></span><span class="chip-c"><span>3</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/music.svg" alt="" width="30" height="30"><span class="chip-l"><span>Музыка</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/health.svg" alt="" width="30" height="30"><span class="chip-l"><span>Здоровье и осанка</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/logic.svg" alt="" width="30" height="30"><span class="chip-l"><span>Логика и мышление</span></span><span class="chip-c"><span>3</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/study.svg" alt="" width="30" height="30"><span class="chip-l"><span>Помощь с учёбой</span></span><span class="chip-c"><span>0</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/self.svg" alt="" width="30" height="30"><span class="chip-l"><span>Самостоятельность</span></span><span class="chip-c"><span>0</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/social.svg" alt="" width="30" height="30"><span class="chip-l"><span>Общение и друзья</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/care.svg" alt="" width="30" height="30"><span class="chip-l"><span>Присмотр</span></span><span class="chip-c"><span>1</span></span></button>
-</div>
-<div class="chips-foot">
-<span class="hand"><span>можно выбрать несколько!</span></span>
-
-<a class="btn btn-p btn-sm only-sm" href="#res">Показать <span>12</span> <span>занятий</span></a>
-</div>
-
-<div class="divider"></div>
-
-<div class="res-wrap">
-<div class="res-head" id="res">
+<div class="pick-first">
+<img class="pf-masc" src="art/m_think.svg" alt="" width="84" height="98">
 <div>
-<div class="res-t" aria-live="polite"><span class="res-n"><span>12</span></span> <span>занятий</span> для ребёнка <span>4 лет</span></div>
-<div class="res-s"><span>Все направления</span></div>
-</div>
-<div class="legend">
-<span class="lg"><span class="lg-dot"></span>возраст ребёнка</span>
-<span class="lg"><span class="lg-bar"></span>возраст группы</span>
-<a class="btn btn-g btn-sm" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4"></path></svg>Расписание</a>
+<div class="pf-t">Сначала выберите возраст</div>
+<p class="pf-p">Покажем занятия, которые подходят именно вашему ребёнку, и подскажем, какие задачи они решают.</p>
 </div>
 </div>
 
 
-
-
-
-<div class="grid">
-
-<article class="card ga" style="animation-delay: 0ms;">
-<img class="card-sc" src="art/sc_speech.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(234, 32, 80);"></span>
-<span class="cat"><span>Речь</span></span>
-
-</div>
-<h4 class="card-t"><span>Логопед, дефектолог, логомассаж</span></h4>
-<p class="card-d"><span>Корректируем речь</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: от 3,5 года. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 25%; width: 75%; background: rgb(234, 32, 80);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>от 3,5 года</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/logopedicheskiy-massaj-logoped" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 45ms;">
-<img class="card-sc" src="art/sc_school.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(158, 91, 177);"></span>
-<span class="cat"><span>Подготовка к школе</span></span>
-
-</div>
-<h4 class="card-t"><span>Комплексное занятие 3–4 года</span></h4>
-<p class="card-d"><span>Всестороннее развитие в одном занятии</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3–4 года. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 20%; width: 20%; background: rgb(158, 91, 177);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3–4 года</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/kompleks-3-4" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 90ms;">
-<img class="card-sc" src="art/sc_school.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(158, 91, 177);"></span>
-<span class="cat"><span>Подготовка к школе</span></span>
-
-</div>
-<h4 class="card-t"><span>Комплексное занятие 4–5 лет</span></h4>
-<p class="card-d"><span>Всестороннее развитие в одном занятии</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 4–5 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 30%; width: 20%; background: rgb(158, 91, 177);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>4–5 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/kompleks-4-5" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 135ms;">
-<img class="card-sc" src="art/sc_read.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(37, 99, 235);"></span>
-<span class="cat"><span>Чтение и письмо</span></span>
-<span class="fmt"><span>в группе</span></span>
-</div>
-<h4 class="card-t"><span>Обучение чтению в группе</span></h4>
-<p class="card-d"><span>Учим азбуку играючи</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 4–8 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 30%; width: 50%; background: rgb(37, 99, 235);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>4–8 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/obuchenie-chteniu-4-8-let-gruppa" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 180ms;">
-<img class="card-sc" src="art/sc_read.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(37, 99, 235);"></span>
-<span class="cat"><span>Чтение и письмо</span></span>
-<span class="fmt"><span>индивидуально</span></span>
-</div>
-<h4 class="card-t"><span>Обучение чтению индивидуально</span></h4>
-<p class="card-d"><span>Учим азбуку играючи</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: от 4 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 30%; width: 70%; background: rgb(37, 99, 235);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>от 4 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/obuchenie-chteniu-4-8-let-individualno" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 225ms;">
-<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
-<span class="cat"><span>Творчество</span></span>
-
-</div>
-<h4 class="card-t"><span>Творчество для малышей</span></h4>
-<p class="card-d"><span>ИЗО и лепка: рисуем, лепим, познаём мир</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 2,5–4 года. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 15%; width: 25%; background: rgb(234, 88, 12);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>2,5–4 года</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/lepka-25-4-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 270ms;">
-<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
-<span class="cat"><span>Творчество</span></span>
-
-</div>
-<h4 class="card-t"><span>ИЗО</span></h4>
-<p class="card-d"><span>Рисуем и познаём мир</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–5 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 25%; width: 25%; background: rgb(234, 88, 12);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3,5–5 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/izo-35-5-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 315ms;">
-<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
-<span class="cat"><span>Творчество</span></span>
-
-</div>
-<h4 class="card-t"><span>Лепка</span></h4>
-<p class="card-d"><span>Лепим и развиваем моторику рук</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 4–8 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 30%; width: 50%; background: rgb(234, 88, 12);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>4–8 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/lepka-4-8-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 360ms;">
-<img class="card-sc" src="art/sc_music.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(176, 76, 184);"></span>
-<span class="cat"><span>Музыка</span></span>
-
-</div>
-<h4 class="card-t"><span>Музыкальная азбука</span></h4>
-<p class="card-d"><span>Учим азбуку через музыку</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3–5 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 20%; width: 30%; background: rgb(176, 76, 184);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3–5 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/azbuka-3-5" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 405ms;">
-<img class="card-sc" src="art/sc_health.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(22, 163, 74);"></span>
-<span class="cat"><span>Здоровье и осанка</span></span>
-
-</div>
-<h4 class="card-t"><span>Оздоровительная гимнастика</span></h4>
-<p class="card-d"><span>Формируем здоровую осанку у дошкольников</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–5 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 25%; width: 25%; background: rgb(22, 163, 74);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3,5–5 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/ozdorovitelnaya-gimnastika" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 405ms;">
-<img class="card-sc" src="art/sc_logic.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(79, 70, 229);"></span>
-<span class="cat"><span>Логика и мышление</span></span>
-
-</div>
-<h4 class="card-t"><span>Легоконструирование</span></h4>
-<p class="card-d"><span>Конструируем из лего</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–7 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 25%; width: 45%; background: rgb(79, 70, 229);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3,5–7 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/legokonstruirovanie" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-<article class="card ga" style="animation-delay: 405ms;">
-<img class="card-sc" src="art/sc_care.svg" alt="" width="260" height="100">
-<div class="card-top">
-<span class="cat-dot" style="background: rgb(217, 119, 6);"></span>
-<span class="cat"><span>Присмотр</span></span>
-<span class="fmt"><span>по выходным</span></span>
-</div>
-<h4 class="card-t"><span>Группа выходного дня</span></h4>
-<p class="card-d"><span>Займём детей на выходных</span></p>
-
-<div class="ab">
-<div class="ab-tr" role="img" aria-label="Возраст группы: 3–6 лет. Вашему ребёнку 4 года">
-<span class="ab-seg" style="left: 20%; width: 40%; background: rgb(217, 119, 6);"></span>
-<span class="ab-ticks"></span>
-<span class="ab-dot" style="left: 35%;"></span>
-</div>
-<div class="ab-row"><span class="ab-l"><span>3–6 лет</span></span></div>
-</div>
-<div class="card-f">
-<a class="more" href="https://poidemigrat.ru/gruppa-vihodnogo-dnya-3-6-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
-<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
-</div>
-</article>
-
-</div>
-
-<div class="dock">
-
-<div class="mbar glass"><span class="mbar-t"><b><span>12</span> <span>занятий</span></b> · <span>4 года</span></span><a class="btn btn-g btn-sm" href="#picker">Изменить</a></div>
-</div>
-</div>
 </div>
 
 
@@ -1622,7 +1340,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="form">
 <div class="fld"><label class="fl" for="f-name">Как вас зовут</label><input class="inp" id="f-name" type="text" placeholder="Имя" autocomplete="given-name"></div>
 <div class="fld"><label class="fl" for="f-tel">Телефон</label><input class="inp" id="f-tel" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></div>
-<div class="sum"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>Ребёнку: <span class="sum-b"><span>4 года</span></span><a class="sum-a" href="#picker">изменить</a></div>
+<div class="sum"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>Ребёнку: <span class="sum-b"><span>возраст не выбран</span></span><a class="sum-a" href="#picker">изменить</a></div>
 
 <button class="btn btn-p btn-wide" type="button">Перезвоните мне</button>
 <label class="chk"><input class="chk-i" type="checkbox">Хочу получать новости центра и приглашения на мероприятия</label>
@@ -1858,14 +1576,14 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <p class="step-h">Нажмите на кубик или на цифру — лесенка подрастёт вместе с ребёнком</p>
 <div class="bars">
 <sc-for list="{{bars}}" as="b" hint-placeholder-count="10"><button class="bar-col" type="button" tabindex="-1" aria-hidden="true" onClick="{{b.pick}}"><span class="b3 {{b.cls}}" style="height: {{b.h}}px"><span class="b3-t" style="top: {{b.tt}}px; transform: rotateX(90deg) translateZ({{b.hh}}px); background-color: {{b.bg}}; transition-delay: {{b.delay}}ms"></span><span class="b3-r" style="background-color: {{b.bg}}; transition-delay: {{b.delay}}ms"></span><span class="b3-f" style="background-color: {{b.bg}}; transition-delay: {{b.delay}}ms"></span></span></button></sc-for>
-<div class="mpos" style="left: calc((100% - 72px) / 10 * {{m.x}} + {{m.gx}}px); bottom: {{m.b}}px">
+<div class="mpos {{m.vis}}" style="left: calc((100% - 72px) / 10 * {{m.x}} + {{m.gx}}px); bottom: {{m.b}}px">
 <div class="masc {{m.hop}}">
 <div class="m-tip">{{m.tip}}</div>
 <img class="masc-img" src="art/m_stand.svg" alt="" width="64" height="74">
 </div>
 </div>
 </div>
-<div class="ages ages-grid" ref="{{ageRef}}" data-row="age" role="group" aria-label="Возраст ребёнка">
+<div class="ages ages-grid {{ageWait}}" ref="{{ageRef}}" data-row="age" role="group" aria-label="Возраст ребёнка">
 <div class="bead" aria-hidden="true" style="border-radius: 16px; left: {{ba.l}}px; right: {{ba.r}}px; top: {{ba.t}}px; bottom: {{ba.b}}px; opacity: {{ba.o}}; transition: {{ba.tr}}">
 <div class="bead-ghost ages-grid" style="left: {{ba.nl}}px; top: {{ba.nt}}px; width: {{ba.W}}px; height: {{ba.H}}px; transition: {{ba.trg}}">
 <sc-for list="{{labels}}" as="l" hint-placeholder-count="10"><span class="age-l age-g"><span class="age-n">{{l.a}}</span><span class="age-u">{{l.unit}}</span></span></sc-for>
@@ -1880,6 +1598,16 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 </div>
 <div class="tip"><span class="tip-i"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg></span><span>{{tip}}</span></div>
 
+<sc-if value="{{noAge}}" hint-placeholder-val="{{ false }}">
+<div class="pick-first">
+<img class="pf-masc" src="art/m_think.svg" alt="" width="84" height="98">
+<div>
+<div class="pf-t">Сначала выберите возраст</div>
+<p class="pf-p">Покажем занятия, которые подходят именно вашему ребёнку, и подскажем, какие задачи они решают.</p>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{agePicked}}" hint-placeholder-val="{{ true }}">
 <div class="divider"></div>
 
 <div class="step"><span class="step-n">2</span><h3 class="step-t">Какие задачи решаем?</h3></div>
@@ -1902,8 +1630,8 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="res-s">{{resSub}}</div>
 </div>
 <div class="legend">
-<span class="lg"><span class="lg-dot"></span>возраст ребёнка</span>
-<span class="lg"><span class="lg-bar"></span>возраст группы</span>
+<span class="lgd"><span class="lg-dot"></span>возраст ребёнка</span>
+<span class="lgd"><span class="lg-bar"></span>возраст группы</span>
 <a class="btn btn-g btn-sm" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4"></path></svg>Расписание</a>
 </div>
 </div>
@@ -1939,7 +1667,8 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 
 <div class="grid">
 <sc-for list="{{cards}}" as="c" hint-placeholder-count="6">
-<article class="card {{c.anim}}" style="animation-delay: {{c.delay}}ms">
+<article class="card {{c.anim}} {{c.openCls}}" style="animation-delay: {{c.delay}}ms">
+<button class="card-tg" type="button" aria-expanded="{{c.open}}" aria-label="{{c.tgAria}}" onClick="{{c.flip}}"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
 <img class="card-sc" src="{{c.scene}}" alt="" width="260" height="100">
 <div class="card-top">
 <span class="cat-dot" style="background: {{c.color}}"></span>
@@ -1947,6 +1676,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <sc-if value="{{c.fmt}}" hint-placeholder-val="{{ false }}"><span class="fmt">{{c.fmt}}</span></sc-if>
 </div>
 <h4 class="card-t">{{c.t}}</h4>
+<span class="cage">{{c.ageLabel}}</span>
 <p class="card-d">{{c.d}}</p>
 <sc-if value="{{c.hasMt}}" hint-placeholder-val="{{ false }}">
 <div class="mt">
@@ -1984,6 +1714,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="mbar glass"><span class="mbar-t"><b>{{resN}} {{resWord}}</b> · {{mbarText}}</span><a class="btn btn-g btn-sm" href="#picker">Изменить</a></div>
 </div>
 </div>
+</sc-if>
 </div>
 </sc-if>
 
@@ -2065,7 +1796,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <sc-if value="{{qs.notResult}}" hint-placeholder-val="{{ true }}">
 <div class="q-nav">
 <button class="btn btn-g" type="button" disabled="{{qs.noBack}}" onClick="{{qBack}}"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5 M11 6l-6 6 6 6"></path></svg>Назад</button>
-<button class="btn btn-p" type="button" onClick="{{qNext}}">{{qs.nextText}}<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></button>
+<button class="btn btn-p" type="button" disabled="{{qs.noNext}}" onClick="{{qNext}}">{{qs.nextText}}<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></button>
 </div>
 </sc-if>
 
@@ -2689,8 +2420,9 @@ class Component extends DCLogic {
 
   setAge(a, mode) {
     this.setState((s) => {
-      if (s.age === a && !mode) return null;
-      const st = { age: a, prevAge: s.age, hop: s.age === a ? s.hop : !s.hop, flip: !s.flip };
+      if (s.age === a && !mode && s.agePicked) return null;
+      // Первый выбор: лесенка вырастает с нуля
+      const st = { age: a, agePicked: true, prevAge: s.agePicked ? s.age : 0, hop: s.age === a ? s.hop : !s.hop, flip: !s.flip };
       if (mode) st.mode = mode;
       return st;
     });
@@ -2854,7 +2586,10 @@ class Component extends DCLogic {
     const D = this.D();
     const s = this.state || {};
     const age = s.age || 4;
-    const prev = s.prevAge || age;
+    // Пока родитель не выбрал возраст, лесенка пустая, а задачи и занятия не показываем
+    const has = !!s.agePicked;
+    const prev = s.prevAge == null ? age : s.prevAge;
+    const openC = s.openC || {};
     const T = s.tasks || [];
     const picked = s.picked || [];
     const q = s.q || { step: 1, char: '', when: [], fmt: 'any', msg: 'call' };
@@ -2871,11 +2606,12 @@ class Component extends DCLogic {
       let delay = 0;
       if (a <= age && a > prev) delay = (a - prev - 1) * 45;
       else if (a > age && a <= prev) delay = (prev - a) * 45;
-      bars.push({ h: h, hh: h / 2, tt: (h - 30) / 2, bg: a <= age ? D.bands[bd].c : 'rgba(255,255,255,.82)', cls: (a <= age ? 'on' : 'off') + (a === age ? ' sel' : ''), delay: delay, pick: () => this.setAge(a) });
-      labels.push({ a: a, unit: yrs(a), on: a === age ? '1' : '0', pressed: a === age, tile: '', pick: () => this.setAge(a) });
+      const lit = has && a <= age;
+      bars.push({ h: h, hh: h / 2, tt: (h - 30) / 2, bg: lit ? D.bands[bd].c : 'rgba(255,255,255,.82)', cls: (lit ? 'on' : 'off') + (has && a === age ? ' sel' : ''), delay: delay, pick: () => this.setAge(a) });
+      labels.push({ a: a, unit: yrs(a), on: has && a === age ? '1' : '0', pressed: has && a === age, tile: '', pick: () => this.setAge(a) });
       quick.push({ a: a, cls: 'qa-' + bd, aria: a + ' ' + yrs(a) + ' — показать занятия', pick: () => this.setAge(a, 'self') });
     }
-    const m = { x: age - 0.5, gx: 8 * (age - 1), b: age * 14 + 8 + 8, hop: s.hop ? 'hopA' : 'hopB', tip: age + ' ' + yrs(age) };
+    const m = { x: age - 0.5, gx: 8 * (age - 1), b: age * 14 + 8 + 8, hop: s.hop ? 'hopA' : 'hopB', tip: age + ' ' + yrs(age), vis: has ? '' : 'mhide' };
 
     const fitList = D.courses.filter((c) => this.fits(c, age));
     const chips = D.tasks.map((t) => {
@@ -2918,6 +2654,8 @@ class Component extends DCLogic {
         abAria: 'Возраст группы: ' + label + '. Вашему ребёнку ' + age + ' ' + yrs(age),
         url: 'https://poidemigrat.ru' + c.u,
         anim: s.flip ? 'ga' : 'gb', delay: Math.min(i, 9) * 45,
+        open: !!openC[c.id], openCls: openC[c.id] ? 'open' : '', tgAria: (openC[c.id] ? 'Свернуть: ' : 'Подробнее: ') + c.t,
+        flip: () => this.setState((st) => { const o = Object.assign({}, st.openC); o[c.id] = !o[c.id]; return { openC: o }; }),
         isPicked: isPicked, pickCls: isPicked ? 'on' : '', pickText: isPicked ? 'В подборке' : 'В подборку', pickIcon: isPicked ? D.I.check : D.I.plus,
         toggle: () => this.togglePick(c.id)
       };
@@ -3005,7 +2743,7 @@ class Component extends DCLogic {
     const qs = {
       n: qStep, pct: qStep * 20 - 10, note: ['', 'поехали!', 'отличный выбор', 'почти готово', 'ещё чуть-чуть!', 'последний вопрос!'][qStep] || '', anim: s.qflip ? 'qa1' : 'qa2',
       s1: qStep === 1, s2: qStep === 2, s3: qStep === 3, s4: qStep === 4, s5: qStep === 5, s6: qStep === 6,
-      notResult: qStep < 6, noBack: qStep === 1,
+      notResult: qStep < 6, noBack: qStep === 1, noNext: qStep === 1 && !has,
       nextText: qStep === 5 ? 'Показать подборку' : (nextEmpty ? 'Пропустить' : 'Далее'),
       summary: sumParts.length ? 'Учли ваши ответы — ' + sumParts.join('; ') + '.' : 'Подобрали по возрасту — уточните задачи, и подборка станет точнее.',
       hasAlt: qAlts.length > 0, notSent: !q.sent, sent: !!q.sent,
@@ -3037,9 +2775,10 @@ class Component extends DCLogic {
       modeOn: { self: isSelf ? '1' : '0', quiz: isSelf ? '0' : '1' }, modePressed: { self: isSelf, quiz: !isSelf },
       goSelf: () => this.setMode('self'), goQuiz: () => this.setMode('quiz'),
       quick: quick, bars: bars, labels: labels, m: m,
-      bandCls: { baby: band === 'baby' ? 'on' : '', pre: band === 'pre' ? 'on' : '', school: band === 'school' ? 'on' : '' },
+      bandCls: { baby: has && band === 'baby' ? 'on' : '', pre: has && band === 'pre' ? 'on' : '', school: has && band === 'school' ? 'on' : '' },
       pickBaby: () => this.setAge(2), pickPre: () => this.setAge(5), pickSchool: () => this.setAge(8),
-      tip: D.bands[band].tip,
+      tip: has ? D.bands[band].tip : 'Нажмите на возраст ребёнка — ниже появятся задачи и подходящие занятия.',
+      agePicked: has, noAge: !has, ageWait: has ? '' : 'wait',
       chips: chips, hasTasks: T.length > 0,
       chipsNote: T.length ? 'выбрано: ' + T.length + ' ' + this.plural(T.length, 'задача', 'задачи', 'задач') : 'можно выбрать несколько!',
       clearTasks: () => this.setState((st) => ({ tasks: [], flip: !st.flip })),
@@ -3063,7 +2802,7 @@ class Component extends DCLogic {
       qSend: () => this.qPatch({ sent: true }),
       team: team, reviews: reviews, album: D.album,
       teamPrev: () => this.scrollTeam(-1), teamNext: () => this.scrollTeam(1),
-      formAge: age + ' ' + yrs(age),
+      formAge: has ? age + ' ' + yrs(age) : 'возраст не выбран',
       sent: !!s.sent, notSent: !s.sent,
       send: () => this.setState({ sent: true }),
       resetSent: () => this.setState({ sent: false })
