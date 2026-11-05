@@ -3,11 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Детский центр «Пойдём играть» в Томске — развивающие занятия для детей от 1 года до 10 лет</title>
+<meta name="description" content="Развивающие занятия для детей от 1 года до 10 лет в Северном парке (Томск): подготовка к саду и школе, логопед, чтение, творчество, музыка, гимнастика, продлёнка и каникулы. Подберите занятия по возрасту онлайн.">
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://poidemigrat.ru/">
+<meta name="theme-color" content="#FBF6FF">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<title>Сайт «Пойдём играть»</title>
-<meta name="description" content="Новый дизайн главной страницы детского центра «Пойдём играть», Томск">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;family=Caveat:wght@600;700&amp;family=Rubik:wght@500;700;800&amp;family=Balsamiq+Sans:wght@400;700&amp;family=Comfortaa:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Пойдём играть">
+<meta property="og:title" content="Детский центр «Пойдём играть» в Томске">
+<meta property="og:description" content="Подготовка к школе, логопед, творчество, продлёнка и праздники. Подберите занятия по возрасту и задачам ребёнка.">
+<meta property="og:url" content="https://spoomer70.github.io/poidemigrat-preview/">
+<meta property="og:image" content="https://spoomer70.github.io/poidemigrat-preview/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Детский центр «Пойдём играть»: развивающие занятия для детей от 1 года до 10 лет">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{if(sessionStorage.getItem('pi-intro'))document.documentElement.classList.add('intro-seen');sessionStorage.setItem('pi-intro','1')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&amp;family=Caveat:wght@600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#FBF6FF}
 html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(91,41,103,.3) transparent}
@@ -98,6 +116,47 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .hdr-r{margin-left:auto;display:flex;align-items:center;gap:12px}
 .tel{font-weight:900;font-size:16px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .tel:hover{color:#7B3A93}
+.skip{position:absolute;left:12px;top:-64px;z-index:400;padding:10px 16px;border-radius:12px;background:#5B2967;color:#fff;font-weight:800;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+.h1-wrap{margin:0;font-size:inherit;font-weight:inherit;line-height:inherit}
+.h1-wrap > .h1{display:block}
+
+/* Бургер и мобильное меню (на ширине до 1100px, где прячется навигация) */
+.burger{display:none;position:relative;flex:none;width:46px;height:46px;margin:0;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.78);box-shadow:0 10px 24px -16px rgba(91,41,103,.5);cursor:pointer}
+.bg-l{position:absolute;left:12px;width:20px;height:2.5px;border-radius:2px;background:#5B2967;transition:transform .35s cubic-bezier(.3,.7,.2,1),opacity .2s,top .35s cubic-bezier(.3,.7,.2,1)}
+.bg-l:nth-child(1){top:15px}
+.bg-l:nth-child(2){top:21.5px}
+.bg-l:nth-child(3){top:28px}
+.burger.open .bg-l:nth-child(1){top:21.5px;transform:rotate(45deg)}
+.burger.open .bg-l:nth-child(2){opacity:0;transform:scaleX(.2)}
+.burger.open .bg-l:nth-child(3){top:21.5px;transform:rotate(-45deg)}
+.mnav{display:none}
+.mnav-bg{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;background:rgba(42,18,53,.3);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;transition:opacity .3s;cursor:pointer}
+.mnav-in{position:relative;margin:10px 12px 0;padding:10px;border-radius:28px;display:flex;flex-direction:column;gap:2px;max-height:calc(100% - 24px);overflow-y:auto;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);border:1px solid #fff;box-shadow:0 30px 60px -24px rgba(42,18,53,.45);opacity:0;transform:translateY(-12px) scale(.98);transform-origin:top center;transition:opacity .3s,transform .45s cubic-bezier(.3,.7,.2,1)}
+.ml{display:flex;align-items:center;gap:14px;padding:10px 12px;border-radius:18px;text-decoration:none;color:var(--ink);opacity:0;transform:translateY(-6px);transition:background .2s,opacity .35s,transform .45s cubic-bezier(.3,.7,.2,1)}
+.ml:hover,.ml:focus-visible{background:rgba(158,91,177,.09);color:var(--ink)}
+.ml-i{width:40px;height:40px;flex:none}
+.ml-t{display:flex;flex-direction:column;font-family:var(--fd);font-weight:var(--fdw);letter-spacing:var(--fdl);font-size:20px;line-height:1.15}
+.ml-s{margin-top:2px;font-family:var(--fb);font-weight:700;font-size:13px;letter-spacing:0;color:var(--ink2)}
+.mnav-f{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:8px;padding:14px 12px 8px;border-top:1px dashed rgba(158,91,177,.32)}
+.mnav-tel{flex:1 1 100%;font-weight:900;font-size:20px;color:var(--ink);text-decoration:none}
+.mnav-soc{display:flex;gap:8px;margin-left:auto}
+.ms{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(158,91,177,.1);color:#7B3A93;font-weight:900;font-size:12px;text-decoration:none}
+.ms:hover{background:rgba(158,91,177,.18);color:#7B3A93}
+@media (max-width:1100px){
+.burger{display:block}
+.mnav{display:block;position:absolute;left:0;right:0;top:100%;height:calc(100vh - 100%);height:calc(100dvh - 100%);visibility:hidden;pointer-events:none;transition:visibility 0s .45s}
+.mnav.open{visibility:visible;pointer-events:auto;transition:none}
+.mnav.open .mnav-bg{opacity:1}
+.mnav.open .mnav-in{opacity:1;transform:none}
+.mnav.open .ml{opacity:1;transform:none}
+.mnav.open .ml:nth-child(2){transition-delay:0s,40ms,40ms}
+.mnav.open .ml:nth-child(3){transition-delay:0s,80ms,80ms}
+.mnav.open .ml:nth-child(4){transition-delay:0s,120ms,120ms}
+.mnav.open .ml:nth-child(5){transition-delay:0s,160ms,160ms}
+.mnav.open .ml:nth-child(6){transition-delay:0s,200ms,200ms}
+}
+@media (max-width:640px){.pill-y{display:none}}
 
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding-top:56px;padding-bottom:84px;scroll-margin-top:80px}
 .enter{animation:enter .9s cubic-bezier(.3,.7,.2,1) backwards}
@@ -361,6 +420,11 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .bt:hover{transform:translateY(-6px);color:var(--ink)}
 .bt-ny{grid-column:span 2;grid-row:span 2;min-height:480px;color:#fff;background:linear-gradient(150deg,#3A1446 0%,#6A2F82 45%,#B83A8C 80%,#E0204F 100%);box-shadow:0 30px 60px -30px rgba(76,29,149,.8)}
 .bt-ny:hover{color:#fff}
+.ny-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 100%;pointer-events:none;transition:transform .8s cubic-bezier(.3,.7,.2,1)}
+.bt-ny:hover .ny-bg{transform:scale(1.04)}
+.ny-go{align-self:flex-start;padding:11px 18px;border-radius:999px;background:rgba(42,18,53,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.28)}
+.bt-ny > .tag,.bt-ny > .bt-h,.bt-ny > .bt-p,.bt-ny > .ny-go{position:relative}
+.bt-ny > .bt-h,.bt-ny > .bt-p{text-shadow:0 2px 14px rgba(42,18,53,.45)}
 .bt-set{grid-column:span 2}
 .bt-mk{grid-column:span 4;min-height:0;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
 .bt-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -664,11 +728,965 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 .art-lg{width:64px;height:64px}
 }
 </style>
-<style>:root{color-scheme:light}html,body{background:#FBF6FF}</style>
+<style>:root{color-scheme:light}html,body{background:#FBF6FF}.intro-seen .splash{display:none}.intro-seen .intro .lg-h{--lg0:.2s}.intro-seen .intro .hc-svg{--lg0:.1s}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ChildCare","@id":"https://poidemigrat.ru/#center","name":"Детский центр «Пойдём играть»","alternateName":"Пойдём играть","description":"Развивающие занятия для детей от 1 года до 10 лет в Северном парке (Томск): подготовка к саду и школе, логопед, чтение, творчество, музыка, гимнастика, продлёнка и каникулы. Подберите занятия по возрасту онлайн.","url":"https://poidemigrat.ru/","logo":"https://spoomer70.github.io/poidemigrat-preview/apple-touch-icon.png","image":"https://spoomer70.github.io/poidemigrat-preview/og-image.jpg","telephone":"+7-995-913-79-09","email":"poidemm.igrat@yandex.ru","foundingDate":"2021","address":{"@type":"PostalAddress","streetAddress":"ул. Марины Цветаевой, 4","addressLocality":"д. Кисловка, мкр. Северный парк","addressRegion":"Томская область","addressCountry":"RU"},"areaServed":[{"@type":"City","name":"Томск"},{"@type":"Place","name":"Северный парк"}],"sameAs":["https://vk.com/poidem_igrat","https://t.me/poidemigrat","https://2gis.ru/tomsk/firm/70000001059170402"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Развивающие занятия для детей от 1 года до 10 лет","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Я сам»","description":"Группа кратковременного пребывания: учимся самостоятельности через игры, творчество и сенсорику","url":"https://poidemigrat.ru/ya-sam","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Малыш и мама»","description":"Социализируемся и мягко готовимся к детскому саду","url":"https://poidemigrat.ru/malysh-i-mama","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Живые нотки»","description":"Развиваемся через музыку","url":"https://poidemigrat.ru/zhivye-notki","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Говорилка»","description":"Курс развития речи для малышей","url":"https://poidemigrat.ru/govorilka","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Сенсорное развитие","description":"Играем и познаём мир","url":"https://poidemigrat.ru/sensornoe-razvitie","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Логопед","description":"Запускаем и корректируем речь","url":"https://poidemigrat.ru/logoped","audience":{"@type":"PeopleAudience","suggestedMinAge":1,"suggestedMaxAge":3}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Творчество для малышей","description":"ИЗО и лепка: рисуем, лепим, познаём мир","url":"https://poidemigrat.ru/lepka-25-4-let","audience":{"@type":"PeopleAudience","suggestedMinAge":2.5,"suggestedMaxAge":4}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Музыкальная азбука","description":"Учим азбуку через музыку","url":"https://poidemigrat.ru/azbuka-3-5","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Группа выходного дня","description":"Займём детей на выходных","url":"https://poidemigrat.ru/gruppa-vihodnogo-dnya-3-6-let","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Комплексное занятие 3–4 года","description":"Всестороннее развитие в одном занятии","url":"https://poidemigrat.ru/kompleks-3-4","audience":{"@type":"PeopleAudience","suggestedMinAge":3,"suggestedMaxAge":4}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Комплексное занятие 4–5 лет","description":"Всестороннее развитие в одном занятии","url":"https://poidemigrat.ru/kompleks-4-5","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Оздоровительная гимнастика","description":"Формируем здоровую осанку у дошкольников","url":"https://poidemigrat.ru/ozdorovitelnaya-gimnastika","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ИЗО","description":"Рисуем и познаём мир","url":"https://poidemigrat.ru/izo-35-5-let","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":5}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Легоконструирование","description":"Конструируем из лего","url":"https://poidemigrat.ru/legokonstruirovanie","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Логопед, дефектолог, логомассаж","description":"Корректируем речь","url":"https://poidemigrat.ru/logopedicheskiy-massaj-logoped","audience":{"@type":"PeopleAudience","suggestedMinAge":3.5,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Лепка","description":"Лепим и развиваем моторику рук","url":"https://poidemigrat.ru/lepka-4-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Обучение чтению в группе","description":"Учим азбуку играючи","url":"https://poidemigrat.ru/obuchenie-chteniu-4-8-let-gruppa","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Обучение чтению индивидуально","description":"Учим азбуку играючи","url":"https://poidemigrat.ru/obuchenie-chteniu-4-8-let-individualno","audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к школе · 1 ступень","description":"Готовимся к школе","url":"https://poidemigrat.ru/podgotovka-shkola-5-6-let","audience":{"@type":"PeopleAudience","suggestedMinAge":5,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ПДД","description":"Правила дорожного движения — подготовительная группа","url":"https://poidemigrat.ru/pdd-5-6","audience":{"@type":"PeopleAudience","suggestedMinAge":5,"suggestedMaxAge":6}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к школе · 2 ступень","description":"Подготовка к выходу в школу","url":"https://poidemigrat.ru/podgotovka-shkola-6-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Экспресс-подготовка к школе","description":"Набор три раза в год: в январе, апреле и июне","url":"https://poidemigrat.ru/express-podgotovka-shkola-6-7-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":7}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ИЗО","description":"Художественное творчество: учимся изображать окружающий мир","url":"https://poidemigrat.ru/izo-6-8-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":8}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Оздоровительная гимнастика","description":"Для дошкольников и младших школьников","url":"https://poidemigrat.ru/ozdorovitelnaya-gimnastika-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Группа выходного дня","description":"Займём детей на выходных","url":"https://poidemigrat.ru/gruppa-vihodnogo-dnya-6-10-let","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каникулярная площадка","description":"Весёлые каникулы для школьников в центре","url":"https://poidemigrat.ru/kanikulyrnaz-ploshadka","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Финансовая грамотность","description":"Учимся обращаться с деньгами","url":"https://poidemigrat.ru/finansovaya-gramotnost-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Курс по шитью","description":"Настоящий швейный курс: ребёнок научится шить готовые изделия","url":"https://poidemigrat.ru/kurs-po-shityu-6-10","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"«Вспомнить всё»","description":"Новый курс в центре «Пойдём играть»","url":"https://poidemigrat.ru/vspomnit-vse","audience":{"@type":"PeopleAudience","suggestedMinAge":6,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Продлёнка","description":"С 12:30 до 18:00 — делаем уроки и весело проводим время. Пятидневка или выборочные дни","url":"https://poidemigrat.ru/prodlenka-smena-1","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ПДД","description":"Правила дорожного движения — школьная группа","url":"https://poidemigrat.ru/pdd-7-9","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":9}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Репетитор начальных классов","description":"Помощь с математикой и русским языком","url":"https://poidemigrat.ru/repetitor","audience":{"@type":"PeopleAudience","suggestedMinAge":7,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каллиграфия","description":"Учимся писать красиво","url":"https://poidemigrat.ru/kalligrafia-8","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Каллиграфия в мини-группе","description":"Красивый почерк в небольшой компании","url":"https://poidemigrat.ru/kalligrafia-8-mini-gruppa","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Скорочтение","description":"Читать быстрее, понимать больше, успевать больше","url":"https://poidemigrat.ru/skorochtenie-8","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Таблица умножения","description":"Курс для школьников","url":"https://poidemigrat.ru/tablitsa-umnojeniya","audience":{"@type":"PeopleAudience","suggestedMinAge":8,"suggestedMaxAge":10}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Подготовка к ВПР","description":"Для учеников 4-х классов","url":"https://poidemigrat.ru/podgotovka-vpr","audience":{"@type":"PeopleAudience","suggestedMinAge":9,"suggestedMaxAge":10}}}]}},{"@type":"WebSite","@id":"https://poidemigrat.ru/#site","url":"https://poidemigrat.ru/","name":"Пойдём играть","inLanguage":"ru-RU","publisher":{"@id":"https://poidemigrat.ru/#center"}}]}</script>
 </head>
 <body>
-<div id="app"></div>
-<template id="dc-tpl">
+<div id="app">
+<div class="pg f-1 gl-2 intro" id="top">
+<svg class="lg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><path id="lgc0" fill="#FA9722" d="M1434.4 1986.9c354.9-2.6 709.7 13.2 1063 47.3 29.2 2.8 89.2 2.9 111.8 13.9 19.4 15 17.1 119.5-8 121.2-35 2.3-86.5-5.9-121.6-8.5-101.7-8.1-203.5-15.1-305.4-21.1-115.2-6-233.5-8.9-349.1-13.9-250.1-2.8-500.3 0-750.3 8.5-135 4.2-269.6 10-404.8 14.3-67.8 2.1-54.6-22.8-57.7-80.2-.6-11.7 1.6-29.9 9.9-38.5 12.9-13.3 36.4-10.1 53.3-12.4 38.1-4.7 76.4-3.6 114.5-6.4 214.5-15.1 429.4-23.1 644.4-24.2Z"></path><path id="lgc1" fill="#5CBFCC" d="M1275.5 1312.3c55.4-1.6 114.3-.6 169.9-.6h293.4s161.3 0 161.3 0c31.4 0 64.2-1.1 95.4 2.2 18.9 2 24.7 6.1 38.5 18.5 21.4 19.1 24 42.5 24.2 70.4.6 102.9.5 206.2.6 309.1l.1 100.2c0 14.9 1.5 38.2-1.2 52.4-10.9 53.4-61.7 70.2-111.2 67.3-46.2-2.8-118.5 9-155.2-27-27.1-26.6-20.5-74.1-20.2-108.8l.6-110.7c2.1-23.4 1.8-61.5-2-84-6.5-38-28.2-71.7-60-93.5-31.5-21.9-70.4-28.6-107.9-21.9-22.5 4.1-43.7 13.1-62.4 26.3-62.5 44.3-57.5 116.5-56 185.2.7 34.1 1 68.2 1 102.3.1 51-1.5 121.9-67.2 125.8-54.9 3.2-149.3 18.7-195.3-14-39.7-28.2-29.9-125.1-28.7-169.1.6-31.1.8-62.3.6-93.4-.3-81.2-5.3-163.9-1.1-245.1 3-58.1 25.3-83.7 82.7-91.6Z"></path><path id="lgc2" fill="#94B707" d="M974.6 1479.1c49.2-5 104.3-4.3 108.1 58.5 6.7 109.1 12.9 218.5 14.5 327.9.9 58-67.5 53.5-107.4 57.4-72.8 6.5-148.1 4.2-220.9 12-86.9 3.9-108.6.5-113.9-96.1-4.7-79.5-7.2-158.6-12.6-238.1.5-24.2-7.3-61.4 7.6-81.8 19.1-26.1 45.6-26.4 74.9-27 49.6-1.1 98.7-4.3 148.2-7 33.9-1.8 67.7-1.6 101.4-5.7Z"></path><path id="lgc3" fill="#9E5BB1" d="M2213.8 1486.4c67.3-1.6 135.6 9.1 202.5 15.9 45.9 4.7 118.9 6.3 160.4 22.8 14.1 5.6 22.1 12.6 27.9 26.9 4.2 10.6 4 22 3.9 33.2-.6 47.1-25.5 311.3-40.4 342.4-6.2 13-20.6 20.8-33.4 25.7-31.5 5.8-170.2-13.5-208.2-17.4-47.2-6.5-100.9-4.9-146.8-17.6-36.6-12.3-41-39.1-38.5-71.8 7.8-100.9 19-201.1 30.3-301.6 3.5-30.6 12.8-47.9 42.3-58.6Z"></path><path id="lgc4" fill="#EA2050" d="M930.5 1184.5c30.6-2.7 49.2-1.6 49.7 33.1.3 20.4 44.6 1.1 61.2 19.4 18.5 20.4 19 40.9 22 67.5 2.6 29.7 12.5 93.5-28.3 102-40.5 8.4-86.7 13.4-128.3 16.9-58.6 5-118.1 12.1-176.7 16.2-5.1.7-10.3 1.4-15.4 1.9-13 1.4-34 2.5-43.8-7.4-24.4-24.4-24.6-71.4-27.1-103.6-1.3-17-1.1-44.8 11-57.2 13.6-14 44.2-15.3 62.8-15.3-.4-10.9-2-36.4 5.5-44.2 16.1-16.4 64.8-19.2 83.6-6.1 8 5.6 9.700 28.6 10.6 37.9 20.8-2.6 44.9-3.7 66-5.1-6.3-43.8 6.9-51.5 47.3-56.1Z"></path><path id="lgc5" fill="#FA9722" d="M1675.5 1037c.5-12 .5-39.9 8.1-47.1 15.6-14.8 71.7-15.1 89-3 10.7 7.5 14.9 38.7 16.3 50.6 22.6-1.3 45.2-1.5 67.8-.4 4.3-22.7 4-32.5 18.5-51 20.8-7.8 57.6-12.6 76.8 1.2 15.6 11.2 18.9 29.1 22.3 46.7 94.5 9.8 72.8 56.3 75.2 131.8.3 8-.1 16.3-.1 24.4-1.1 30.2-24.1 49.7-53 51.7-52.6 3.5-106.1 2.4-158.8 2.4-101 .4-202.1-.1-303.1-1.4-54.9-.5-109.8-.6-164.7-.3-123.2.9-164.8 18.4-153.2-133.1 5.4-70.2 17.9-73.5 87.3-75.1 2.7-32.1 1.3-48.5 37.2-55.1 51.5-1.2 78.3-5.6 77.4 58.1 23-2 50.4-2 73.5-1.3 0-10.7.8-37.8 7.900-44.6 19.3-18.4 75.1-16.4 94.7.9 9.4 8.4 8 34.1 8 45.4 22.1-1.9 50.9-1.6 73-.8Z"></path><path id="lgc6" fill="#5CBFCC" d="M813.3 689.1c33 6.5 84.5 98.9 105.3 129.9 32.5 47.4 64 95.5 94.6 144.1 19.4 30.6 71.1 100.6 58.4 136.6-19.3 22.5-144.8 33.6-179.7 38.9-68.6 5.1-136.8 17.7-205.6 17.9-27.9.1-41.6-12.2-36-41.7 10.7-48.7 30-112.4 48.1-158.5 21.7-55.1 74.2-236.2 114.8-267.3Z"></path><path id="lgc7" fill="#EA2050" d="M1641.8 457.3c11.7 2.1 21.9 5.5 31.7 12.4 38 26.9 91.4 94.3 124.5 130.8 67.8 74.7 144.9 152.8 205.2 232.9 12.7 16.9 33.9 43.3 35.7 64.7.5 5.4-2 8.9-5.8 12.5-37.9 37-314 21.1-377.7 19.6l-174.7-.2c-51.4-.1-159.1 6.4-204.3-11-8-3.1-17.8-7.7-21-16.3-2.5-6.6-.3-13.5 2.2-19.7 20.6-52.1 158.1-195.8 201.3-243.5 45.6-50.4 90.2-103.8 139.7-150.3 12.8-12 26.8-24.9 43.1-31.9Z"></path><path id="lgc8" fill="#94B707" d="M2432.9 977.7c7.5 3.1 18.6 10.4 22.7 17.1 26.4 43.3 48.1 102.2 67.2 148.9 30.5 75.4 63.9 150.3 88.4 227.9 3.9 13.3 14.6 54.6-.7 63.5-23 13.3-69.3 11.2-95.3 10.2-42.1-1.6-85.7-4.5-127.3-9.2-50.6-3.2-104.6-4-154.3-14-13.7-2.8-35-8.9-42.3-21.8-4.4-7.7-2.2-20.9-.4-29.2 11.2-50 161.8-301.4 200.3-352.4 12.2-16.2 24.3-30.2 41.6-41Z"></path><path id="lgf-left" fill="#FA9722" d="M797.5 421.3c42.1 13 180.4 114.6 212.3 151.5 6.6 7.6 11.2 15.7 9.9 26.5-4.3 7-2.3 4.7-11.1 8.4-43.8 8.8-175.1 10.5-216.1-13.8-8.4-35.2-10.3-140.5 4.9-172.7Z"></path><path id="lgf-center" fill="#9E5BB1" d="M1638.6 65.7c7.7-.6 15.4-.5 22.9 1.5 61.9 16.6 346.5 232.2 378.8 287.8 3 5.2 5.5 10.3 3.5 16.3-3.4 10.8-21 16.6-30.2 20.8-68.2 15.3-164.3 8.2-233.8 5.3-51.3-2.2-156.5 8.3-159.700-60.1-2.4-51.4-18.2-238.5 18.5-271.6Z"></path><path id="lgf-right" fill="#EA2050" d="M2433.9 745c10.7 3.1 29.6 11.3 38.7 16.8 28.5 17.1 191.7 125.7 184 158.5-3.6 5.2-8 6.4-13.9 9.1-54.6 7.8-142 7.3-195.8-4-36.6-7.7-23.5-152.2-13-180.3Z"></path><path id="lgl1" fill="#9E5BB1" d="M484 2318c5.4-1.4 3-1.7 7.6.5 18.4 116.3 32.5 234.9 50.6 351.4 7.5 48.5 11.8 108.5 22.6 154.7-4.6 2-9.3 3.9-14.1 5.5-30.6 10.6-107.6 30.1-136 16.4-8.2-8.5-12-33.8-13.4-45.7-12.8-108.6-36.7-219.5-44.7-328.3-38.7 2-81.4 8.8-116 10.2 5.6 50.2 10.7 95.4 17.8 145.5 10.4 79.7 24.1 155.2 33.2 236.8-58.5 21-96.2 21.4-156.8 22-6.4-58.2-16.3-121.3-24.5-179.7l-45.8-332.3c88.5-11.5 176.9-23.4 265.2-35.8 46.4-6.6 110.2-18.5 154.3-21.2Z"></path><path id="lgl2" fill="#EA2050" d="M795.4 2286.9c56.4-6.3 116.6 13.5 160.6 49 61.1 49.3 82 126.8 90.3 201.4 17.9 160.8-54.8 277.6-222.4 293.2-162.9 7-243.3-100.8-258.1-253.6-15.7-161.7 64.2-274.7 229.7-290ZM825.4 2684.8c27-10.1 44.4-21.4 56-48.8 30.4-71.6 8.2-211.3-92.8-204.5-79.2 26.5-78.2 115.9-58.5 185.2 13.2 46.4 45.700 71.9 95.3 68.1Z"></path><g id="lgl3" fill="#9E5BB1"><path d="M1423.8 2287c26.4-3 76.4.4 102.7 4.4 3.7 22.1 3.6 57.4 3.8 80.6.2 34.6.7 69.3 1.4 103.9.6 29.6 11.5 325.7 2.5 330.9-23.4 13.4-120.3 6.7-154.4 2.6-1.9-43-.8-86.5-2.1-129.5-1.2-41-3.9-82.4-6-123.5-51.3 69.3-84.9 173.3-116.6 254.1-19.4 6.5-40 7.6-60.6 10.9-39.6 3.2-62.3.7-100.5-5.1-12.6-81.9-7.1-150.2-9.4-231.7-2.7-94.2-6.3-185.8-4.9-280.4 42.5-10.4 113.4-17.1 154.5-3.3 8.2 34.9 6.1 86.3 6.5 123.7.5 43.6 2.4 89.7 1.9 133.1 42-84.2 71.3-179.8 121.5-259.2 17.9-7.2 40.7-9.9 59.8-11.5Z"></path><path d="M1353.2 2199.7c21.3 2 26.4 4.9 45.8 14.9-11.6 19-60.1 76.4-77.5 99.4-16-1.8-36.6-19-42.3-33.9.1-25.5 46.6-75.7 74-80.5Z"></path></g><path id="lgl4" fill="#FA9722" d="M1722.8 2278.9c115.8-3.6 250.4 4.3 366.9 7 .8 13.3.9 26.6.4 40-2.5 65-1.7 130.1-3.6 195.2-1.4 49.9-4.2 98.9-2.6 148.8 24.5-.8 46.7.7 71 2.9 1.2 66.6-2.7 117.6-4.4 182.8-64.4 9.5-80.7 6.1-144.2.3l-2.7-41.1.1-5.4c-8.5-6.2-246.7-4.5-281-7.3.1 9.7 1.7 38.6-7.9 42.8-36.4 15.9-105.2 4.9-141.7-.5-.4-49.9-2.6-138.9 2.5-186.5 20.3 2.2 46.6 2.7 67.5 3.7 9.2-16.3 22.7-40 28.5-57.5 27.8-84 30.6-177 43.3-264.3 2.8-19.1 3.9-40.9 7.6-59.1l.3-1.7ZM1805.8 2664.1c20.9-1.2 45.6-.2 66.8.2 18.4 1.2 34.6 1.7 53.1 1.9-2.2-76.8 3.2-167.1 2.8-246.6-20.8-.4-40.6-.7-61.3-1.9-8.1 54-14.2 113.9-28.3 166.1-6.2 22.7-22.8 58.1-33.2 80.2Z"></path><g id="lgl5" fill="#9E5BB1"><path d="M2221.6 2316.7c53.9-.2 110 6.6 164.1 9.3 16.9.9 120.4.9 126.9 13.3 14.1 27 .2 94.1-5.2 124.6l-150-9.8c-2.1 29.5-3.9 53.4-4.4 83.2 104.6-3.1 129.1-3.4 99.8 111.3-19.3-.5-92.1-1.2-108-4.4-.1 11.8-1.7 72.2 1.1 80.9l10.2.7c43.9 1.4 89.5 5.2 133.6 7.5 4.2 55.7 12.4 72.8-8.7 126.9-43.5-2.4-255.9-8.4-282.4-22.1-13.9-20.6-.5-158 2.1-192.2 8.3-108.8 11-220.9 20.9-329.3Z"></path><path d="M2294.6 2251.6c23 2.1 70.5-1.6 52.1 38.7-4.2 9.3-7.9 10.3-17.5 13.7-36.8-.7-85.6-24-34.6-52.4Z"></path><path d="M2402 2261.3c15.4 1.1 46.9-2.4 55.9 10.4 10.1 14.3 3.5 28.8-9.1 37.6-15.3 1-30.9-.1-45.7-4-21.9-5.7-20.4-36.5-1-44Z"></path></g><path id="lgl6" fill="#9E5BB1" d="M2629.8 2364.3c53.2-4.4 145.6 4.3 189.9 33.2 6.3 37.5 15.7 76.7 23.5 114.2 8.8 42.4 17.8 91.9 31.2 132.5 38.5-44.9 58.2-118.9 85.3-171.6 6.2-12.1 24.2-56.2 37.9-58.9 41.7-8.1 96.1 1.5 137.9 10 21.3 5 37.8 12 53.8 18.3-1.3 40.4-10.6 112.1-14.3 155.3l-28.6 348.9c-64.8 3-81.8 2.4-144.5-14.9.1-11.1.8-23.9 1.9-34.9 7-72 11-144.7 18.7-216.6 3.3-12.1 2.9-45.9 2.6-58.9-29.1 35.6-42.3 81.4-61.4 123-25.1 54.6-48.9 119.1-75.8 172.1-33.4 1.3-62.7-3.2-95.1-10.3-9.7-45.1-16.9-106.2-25.2-153.9-8.4-48.5-24.5-125-28.8-172.3-30.2 99-34.9 198.3-57.8 298-.9 3.8-10.4 8.8-13.9 9.5-40.4 8.7-88.7-4.2-125-22.2.1-2.2.3-4.3.5-6.5 2.5-29.6 10.1-68.7 15.1-98.5l21.9-135.7c9.3-59 19.2-117.8 29.5-176.6 4.3-23.9 8.6-48.7 13.5-72.5 1.5-7.3 2-6.5 7.3-11Z"></path><path id="lgl7" fill="#9E5BB1" d="M764.6 2937.9c14.1-1.9 45.5.9 59.9 2.3 5 78.3 22 178.3 31.8 257.5 9.5 76.5 17.6 174.6 32.7 247.5-62.1 22.1-94 21.8-158.2 21.3-8.2-52.8-13.1-110.8-20.7-164.1-4.1-28.8-3.8-60.7-11.6-89.2-35.2 44-57.8 147.1-74.5 202.8-4.4 14.6-11.2 50.1-19.8 60.5-17.4 20.9-84.1 26.2-109.2 29.5-13.6 1.5-36.8 1-51.2 1.1-6.5-45.7-11.3-94.1-17.3-140.3l-28.7-211c-6.9-53.3-12.8-106.1-21.2-159.2 42.6-14.8 110.8-27.9 155-19.4 8.7 23.5 10.4 60.2 14.1 85.7 8 54.8 12.8 120.5 26 173.4 10.2-46.6 63-239.5 89.2-270.6 19.2-22.8 75.5-25 103.8-27.9Z"></path><path id="lgl8" fill="#9E5BB1" d="M1190.7 2934.4c19.9-.5 39.9-.7 59.8-.8 10.2 44.1 7 96.3 6.4 142.1-49.8.9-104.3 1.1-153.8 4.8 9.2 76.3-.1 165.8 7.6 243.6 2 20.1 5.7 111.5.5 126.4-17.1 12.2-74 13-96.8 13.1-19.9-1.2-41.3-2-60.5-6.9-2.6-112.8-6.3-225.5-11-338.2-1.9-57-1.1-119.8-4.5-175.8 20.5-3 60.3-3.5 82.5-4.3 56.6-2.3 113.2-3.6 169.9-4Z"></path><path id="lgl9" fill="#5CBFCC" d="M1330.4 2924.4c20.8-.6 44.6-.3 65.3.6 65.4 2.9 177.3-3.6 226.9 46.7 113.7 115.1 34.1 323.1-132.8 328.1-15.2 2.2-25.3 3.6-40.9 4 .5 26.2 1.4 120.3-7.7 139.5-9.2 8.4-53 9.6-68.1 9.7-57.1.4-70.9 1.3-69-56.7 5-155.2 3.3-309.3 13.3-463.8.3-3.9 9.9-6.8 12.9-8.1ZM1453.2 3179.2c23.5-2.2 39.8-1.4 58.4-17.4 23.3-32.9 29.3-73.2-3-103-21.2-5.1-33-5.8-54.9-5.5 0 40.5.3 85.6-.5 125.8Z"></path><path id="lgl10" fill="#9E5BB1" d="M1783.2 2941.8c53.6-2.5 142.1-1.4 195.6 1.9 6.3 21.9 12.1 44.7 17.1 67 34.3 152.2 72.2 303.6 106.2 455.9-13.2 1.6-27.2 2.1-40.5 2.6-103.1 4-112.9 11.3-132.5-92.5l-5.1-26.9c-41.5.1-87.7 1-128.6-2-6.4 35.7-12.8 95.5-48.5 112.1-28.4 13.2-85.3 4.8-114.2-5.1 10.6-41.1 24.3-84.2 36-125.3l52.9-188.4c17.4-61.1 33.5-123.4 52.1-184.1 2-6.6 4.3-10.8 9.7-15.1ZM1819.3 3256.9l39.6.1 43.8-.1c-8.7-25.6-26.6-153.8-37.4-163.5-19.3 53.3-34.7 107.9-46.1 163.4Z"></path><path id="lgl11" fill="#94B707" d="M2140.4 2944.9c19-.1 48.6 3.3 68.3 5 36.5 2.8 72.9 5.8 109.4 9 48.6 4.2 117 7 162.5 14.1 3.9 28.5 5.1 57.3 3.7 86-3.4 58.9-42 45.9-85.3 45.3-10.2-.1-20.8-1.1-30.8-2.4.8 94.1-18.5 209-21.9 304.7-1.6 28.1-5.9 56.1-7.5 85.7-64.3-.1-83.6-1.9-145.8-12.1.4-37.4 4.9-78.4 8.3-116.1 8.2-90.4 12.1-185.2 21.5-275.3-23.8-2.8-87.1.5-98.4-15.8-17.9-25.7-9-107.5 16.2-128.1Z"></path><path id="lgl12" fill="#9E5BB1" d="M2554.1 2994.1c60.2-5.1 97.8.8 154.9 17.5-5.2 52.2-13.6 100.5-17 153.8 2.5.1 5 .3 7.5.5 63.5 5.7 137.9 8.7 179.9 61.1 31.8 39.8 37.6 90.4 32.6 139.3-6.3 62.7-18.9 102.7-68 143.4-58.4 42.2-141.3 21.9-209 14.2-47.6-5.6-95.3-10.9-143-15.9l41.3-358.7 11.8-102.4c1.2-10.6 3.8-45.8 8.9-52.7ZM2668 3398.7c16.4 1.7 50.5 6.5 64.2-.7 18.1-21.3 19.5-40 18.5-67-1.4-39.1-41.1-40.7-71-41.4-6 38-9.9 70.7-11.8 109.2Z"></path><g id="lgb" fill="#9E5BB1"><path d="M558.2 3672.4l106.9-.4c-.5 55.6-2.1 110.3.9 166 5.7 2.5 7.6 3.5 12.9 6.7 5.3 14.5 7.5 59.3-7.9 69.6-23.5 1.8-18.1-29.1-17.8-45.2-9.9.7-24.2.1-34.5-.1-32.4-.2-65.3.3-97.7.5.8 11.2 3.7 29.8-3.5 39.1-4.8 6.1-19.1 8.4-24.7 2.4-2.8-12.1-5.4-52.3-.9-62.8 5.5-5.6 10.8-6.3 18.4-8.6 21.2-48.5 20-114.5 18.2-166.8 9.6.2 20.1-.1 29.8-.2ZM549.7 3839.1c23.9-1.1 47.2-.3 70.9-.9l4.5-.8c4.6-11.1 1.5-114.7 1.1-133.6-19.9 0-41.2.5-61.1.1 2 42.7-6.2 93.5-15.5 135.2Z"></path><path d="M2713 3672.6c17.6-1.1 39.8-.1 58.8-1.5 63.4-4.7 117 37.5 72.3 101.1-14.7 20.9-54.1 19.6-80.7 20.2-5.8-.2-7.5-.1-13.3.6-2.2 4.5-3.4 67.9-3.9 78.8-9.4.6-22.5 1.3-31.3-1.6-6.9-8.9-3.9-97.9-4.6-115.8-.5-11.9-2.5-74.3 2.8-81.9ZM2811.5 3751.5c35.5-49.7-33-46.3-61.8-48.4 1.1 19.6 1 38.1.9 57.7 21.2-3.3 41.9-.6 60.8-9.3Z"></path><path d="M1656.5 3671.8l33.3-.6c-2.5 34.3-1.3 103.6 1.8 136.5 14.4-24.8 34.9-52.3 50.4-77.3 7.8-12.7 27.1-47.4 34.7-55.9 10.1-3.5 24.2-2.4 35.5-2.4 2.1 30.2 1.2 65.7.9 96.2-.2 31.3.2 66.8-1.9 97.7-6.8 6.1-22.9 4.5-32.2 4.3-3.1-38.7.3-86.4-1.7-128.4-30.8 32.300-60.2 88.1-84.9 126.7-14.2 2.1-21.4 1.9-36 1.7-2.4-39.8-.4-84.8-1.3-125.2-.3-14.3-.9-62.5 1.4-73.4Z"></path><path d="M2058.3 3671.4l34.8.3c3.2 29.4 2.1 77.9 2.2 108.8.2 15.6-2.5 44 1.5 59.2.5 1.9 6.4 3.1 9.1 4 7.8 9 4.7 54.8 4.5 69.4l-28.2-.8.8-42.1c-48.1.2-94.9-.2-143.1.9-3-31.9-2.1-68.5-1.8-100.7.3-30.4-1.1-64.8.5-94.8 4.7-3.9 3.8-2.6 11.4-3l24.5-1.1c1.4 43 3.6 127.8.8 169.7 29.8 1.6 52.4 1.4 82.1-1.2 1.1-56.2 1.4-112.3.8-168.5Z"></path><path d="M1489.5 3804.1c32.1-39.8 53.3-84.9 82.3-126.3 5.2-7.4 26.3-6.1 35.1-6.2 1.2 48.9 2.4 142.6.6 195.9-.9 1-1.9 2-2.8 3l-7.8-.1c-9.6-.3-12 1-19.6-3.5-5.8-18.9-.7-92.5-5.7-125.4-34 39.7-54.7 86.2-84.3 128.1-8.9 1.2-23.5 1.6-32.9 2-3.4-50.6-2.9-141.8-1.4-194.2 3.7-5.1 2.5-3.4 10.9-4.9 5.3-.2 13.8-1.4 18.5 1.2 3.8 2.1 1.7 92.7 2.6 105.7.6 8.4 2.5 16.6 4.6 24.7Z"></path><path d="M2453.2 3673.2l36.9-2c.7 51.5.9 142.3-.6 197-1 1.2-2 2.3-3 3.5-9.8-.3-20.4.3-29-3.7-7.6-12.4-4.4-70.3-4-87.1-17.6 1.3-67.3.7-84.8-.8.4 27.5.9 62.2-1.8 89.1-12 1.1-21 1-33.1.9-1.5-18.9-3.1-190.2 1.7-197.7 10.8-.5 23-.3 33.9-.4.5 26-.4 54.6-.7 80.8 28.7-.6 57.4-.8 86.1-.7-1.9-19.2-1.2-58.3-1.6-79Z"></path><path d="M2148.3 3672.2c45.4 1.2 93.8.1 139.3-.7l1 30.1c-27.7-.1-84.1 2.1-108.8-.7.9 16.8 1 34.5 1.4 51.3 24.6-2.3 73.5-.9 99.7-.9l.2 28.7-97.3.3-2.4.1-2.1 2.6c-.6 21.4.2 35.6 4.9 56.3 26.5 5 81.6 2.7 110.6 2.3l-.7 29.3c-39.3-3.1-109-1.8-149.4.3l-.1-1.9c-2.4-41.3-.3-146.9.2-193.1 1.2-1.3 2.4-2.7 3.6-4Z"></path><path d="M717.4 3672.4c45.8.6 93.9 1.2 139.5-1l1 30c-29.5-.3-79.9 2.8-107.5-.9 1.6 14.5 1.1 37 1.3 52.1 33.2-1.3 67.9-1.1 101.2-1.4l-.7 28.5-90.9.4c-3.8-.1-4.8.1-8.6.5-5.3 8.4-2.5 49.3-2.2 62.1 34.7-1.6 78.2-.7 113.5-.8-.1 9-.8 19-1.1 28.1-44.6-2-102.8-1.3-147.9-.2-2.3-51.9 1.3-138.5.2-193.5.8-1.3 1.6-2.6 2.3-4Z"></path><path d="M1289.8 3672.4l25.6-1c-.1 11.5-3.3 84.2 5.2 85.3 39 3.6 31-63.1 60.4-76.7 10.4-4.8 35.2-10.4 41.3 2.2-3.8 15.5-21.9 15-28 22.4-20.3 24.5-15.8 39.7-40.4 65.2 29.9 17.9 38.8 42.5 54.3 73.1l13.6 27.3c-12.9.3-23.7.1-36.7-.4-13.8-19.4-35.4-76.3-58.3-90.4-2-1.2-3.3.3-6 1.8-8.9 16.5-5.7 68.2-5.5 89.7-10.5-1.1-23.4-.9-34.1-1.1-2-51.3-1-102.1-1.4-153.4-.1-13.1-.5-26.4.1-39.5 4.2-4.9 2.1-3.4 9.9-4.5Z"></path><path d="M1151.9 3669.9c31.6-2.5 56.8 9.3 76.8 34.6 3.8 4.8 3.4 10.2 1.9 15.7-4.5 6.2-11.4 7.2-19.1 9.7-17.9-17-28-34.2-56.4-32.5-71.5 4.1-68.7 154.4 7.4 147.8 15.1-1.3 26.1-13 34.6-24.1l9.7-19.6 12.1 4.2c9.4 3.1 13.6 2.9 15.8 13.1-7.8 25.1-33.5 47.2-59.2 52.3-22.4 4.5-45.6-.2-64.4-13.1-60.9-42-56.6-157.6 18-182.7 7.5-2.5 15-3.9 22.8-5.3Z"></path><path d="M2525 3672.3c50.5.4 104.1-.4 154.7-.9-.9 9.7-.6 19.7-.6 29.4-20.1.1-40.2 0-60.3-.3 3 21.3 1.3 87.3 1.3 111.5l.1 59.5-37.7-.7c-3.3-39.3-1.4-128.6-.8-170.2-24-.1-74.5 11-56.8-28.4Z"></path><path d="M891.9 3671.8c27.2 1.2 133.3-4.2 149.5 4 18.3 32-41 25-56.6 24.6 2.1 25 .6 85.8.8 114.2-.1 41.3 11.7 53.9-35.9 56-1.6-52.9-.5-116.3 0-169.6-13.8-.3-27.1 1-40.7.8-23.4-.3-20.4-14.4-17.1-30Z"></path><path d="M1697.9 3616c6.1 3.6 13.7 11.2 20.9 15.4 27.2 16 39.1-10.8 50.9-14.1l1.7 2-1.2 6.2c-13.4 15.8-16.8 16.8-36.3 24.1-19.2-5.7-36.3-9.9-36-33.6Z"></path></g></defs></svg>
+<button class="splash" type="button" aria-label="Пропустить заставку"><span class="sp-glow"></span><svg class="lg lg-v lg-sp" viewBox="4 5 3244 3971" aria-hidden="true" focusable="false">
+<g class="lg-in lg-c lc0"><use href="#lgc0"></use></g><g class="lg-in lg-c lc1"><use href="#lgc1"></use></g><g class="lg-in lg-c lc2"><use href="#lgc2"></use></g><g class="lg-in lg-c lc3"><use href="#lgc3"></use></g><g class="lg-in lg-c lc4"><use href="#lgc4"></use></g><g class="lg-in lg-c lc5"><use href="#lgc5"></use></g><g class="lg-in lg-c lc6"><use href="#lgc6"></use></g><g class="lg-in lg-c lc7"><use href="#lgc7"></use></g><g class="lg-in lg-c lc8"><use href="#lgc8"></use></g>
+<g class="lg-in lg-fi lg-fi-left"><use class="lg-f lg-f-left" href="#lgf-left"></use></g><g class="lg-in lg-fi lg-fi-center"><use class="lg-f lg-f-center" href="#lgf-center"></use></g><g class="lg-in lg-fi lg-fi-right"><use class="lg-f lg-f-right" href="#lgf-right"></use></g>
+<g class="lg-in lg-li lj0"><use class="lg-l" href="#lgl1"></use></g><g class="lg-in lg-li lj1"><use class="lg-l" href="#lgl2"></use></g><g class="lg-in lg-li lj2"><use class="lg-l" href="#lgl3"></use></g><g class="lg-in lg-li lj3"><use class="lg-l" href="#lgl4"></use></g><g class="lg-in lg-li lj4"><use class="lg-l" href="#lgl5"></use></g><g class="lg-in lg-li lj5"><use class="lg-l" href="#lgl6"></use></g>
+<g class="lg-in lg-li lj6"><use class="lg-l" href="#lgl7"></use></g><g class="lg-in lg-li lj7"><use class="lg-l" href="#lgl8"></use></g><g class="lg-in lg-li lj8"><use class="lg-l" href="#lgl9"></use></g><g class="lg-in lg-li lj9"><use class="lg-l" href="#lgl10"></use></g><g class="lg-in lg-li lj10"><use class="lg-l" href="#lgl11"></use></g><g class="lg-in lg-li lj11"><use class="lg-l" href="#lgl12"></use></g>
+<g class="lg-in lg-bi"><use class="lg-br" href="#lgb"></use></g>
+</svg><span class="sp-skip">нажмите, чтобы пропустить</span></button>
+<div class="dots"></div>
+<div class="blob" style="left: -140px; top: 60px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(234, 32, 80, 0.42), rgba(234, 32, 80, 0) 68%);"></div>
+<div class="blob" style="right: -180px; top: -80px; width: 680px; height: 680px; background: radial-gradient(circle, rgba(176, 124, 196, 0.4), rgba(176, 124, 196, 0) 68%); animation-delay: -8s;"></div>
+<div class="blob" style="right: 18%; top: 560px; width: 440px; height: 440px; background: radial-gradient(circle, rgba(250, 151, 34, 0.4), rgba(250, 151, 34, 0) 68%); animation-delay: -14s;"></div>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="promo">
+<span>А у нас уже продаются билеты на новогодние ёлки!</span>
+<a class="promo-a" href="https://poidemigrat.ru/new-year-2027" target="_blank" rel="noopener">Смотреть программы</a>
+</div>
+
+<header class="hdr">
+<div class="wrap hdr-in">
+<a class="brand" href="#top"><svg class="lg lg-h logo" viewBox="542 5 5513 2226" role="img" aria-label="Пойдём играть — детский центр">
+<g class="lg-in lg-c lc0"><use href="#lgc0"></use></g><g class="lg-in lg-c lc1"><use href="#lgc1"></use></g><g class="lg-in lg-c lc2"><use href="#lgc2"></use></g><g class="lg-in lg-c lc3"><use href="#lgc3"></use></g><g class="lg-in lg-c lc4"><use href="#lgc4"></use></g><g class="lg-in lg-c lc5"><use href="#lgc5"></use></g><g class="lg-in lg-c lc6"><use href="#lgc6"></use></g><g class="lg-in lg-c lc7"><use href="#lgc7"></use></g><g class="lg-in lg-c lc8"><use href="#lgc8"></use></g>
+<g class="lg-in lg-fi lg-fi-left"><use class="lg-f lg-f-left" href="#lgf-left"></use></g><g class="lg-in lg-fi lg-fi-center"><use class="lg-f lg-f-center" href="#lgf-center"></use></g><g class="lg-in lg-fi lg-fi-right"><use class="lg-f lg-f-right" href="#lgf-right"></use></g>
+<g transform="translate(2806.0 -1804.7)"><g class="lg-in lg-li lj0"><use class="lg-l" href="#lgl1"></use></g><g class="lg-in lg-li lj1"><use class="lg-l" href="#lgl2"></use></g><g class="lg-in lg-li lj2"><use class="lg-l" href="#lgl3"></use></g><g class="lg-in lg-li lj3"><use class="lg-l" href="#lgl4"></use></g><g class="lg-in lg-li lj4"><use class="lg-l" href="#lgl5"></use></g><g class="lg-in lg-li lj5"><use class="lg-l" href="#lgl6"></use></g></g>
+<g transform="translate(2525.2 -1804.7)"><g class="lg-in lg-li lj6"><use class="lg-l" href="#lgl7"></use></g><g class="lg-in lg-li lj7"><use class="lg-l" href="#lgl8"></use></g><g class="lg-in lg-li lj8"><use class="lg-l" href="#lgl9"></use></g><g class="lg-in lg-li lj9"><use class="lg-l" href="#lgl10"></use></g><g class="lg-in lg-li lj10"><use class="lg-l" href="#lgl11"></use></g><g class="lg-in lg-li lj11"><use class="lg-l" href="#lgl12"></use></g></g>
+<g transform="translate(2380.8 -2517.6) scale(1.1971)"><g class="lg-in lg-bi"><use class="lg-br" href="#lgb"></use></g></g>
+</svg></a>
+<nav class="nav" aria-label="Разделы сайта">
+<a class="nl" href="#picker">Занятия</a>
+<a class="nl" href="#picker">Анкета</a>
+<a class="nl" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener">Расписание</a>
+<a class="nl" href="#team">Педагоги</a>
+<a class="nl" href="#contacts">Контакты</a>
+</nav>
+<div class="hdr-r">
+<a class="tel" href="tel:+79959137909">+7 995 913 79 09</a>
+<a class="btn btn-p btn-sm" href="#form"><span class="hide-sm">Заказать звонок</span><span class="only-sm">Записаться</span></a>
+<button class="burger " type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span class="bg-l"></span><span class="bg-l"></span><span class="bg-l"></span></button>
+</div>
+</div>
+<div class="mnav " id="mnav">
+<button class="mnav-bg" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
+<nav class="mnav-in" aria-label="Меню">
+<a class="ml" href="#picker"><img class="ml-i" src="art/blocks.svg" alt=""><span class="ml-t">Занятия<span class="ml-s">подбор по возрасту и задачам</span></span></a>
+<a class="ml" href="#picker"><img class="ml-i" src="art/wand.svg" alt=""><span class="ml-t">Анкета<span class="ml-s">5 вопросов — подберём за вас</span></span></a>
+<a class="ml" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener"><img class="ml-i" src="art/calendar.svg" alt=""><span class="ml-t">Расписание<span class="ml-s">все группы и время занятий</span></span></a>
+<a class="ml" href="#team"><img class="ml-i" src="art/apple.svg" alt=""><span class="ml-t">Педагоги<span class="ml-s">14 специалистов центра</span></span></a>
+<a class="ml" href="#about"><img class="ml-i" src="art/sun.svg" alt=""><span class="ml-t">О центре<span class="ml-s">живые фото и отзывы родителей</span></span></a>
+<a class="ml" href="#contacts"><img class="ml-i" src="art/pin.svg" alt=""><span class="ml-t">Контакты<span class="ml-s">Северный парк, ул. Марины Цветаевой, 4</span></span></a>
+<div class="mnav-f">
+<a class="mnav-tel" href="tel:+79959137909">+7 995 913 79 09</a>
+<a class="btn btn-p btn-sm" href="#form">Заказать звонок</a>
+<div class="mnav-soc">
+<a class="ms" href="https://vk.com/poidem_igrat" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+<a class="ms" href="https://t.me/poidemigrat" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+<a class="ms" href="https://max.ru/u/f9LHodD0cOJwVI3mhHC0VAOuNdomttBLBHhl4er_895AEfe1R9LTbH41OhI" target="_blank" rel="noopener" aria-label="Написать в MAX">MAX</a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="wrap hero">
+<div style="position: relative;">
+<img class="sh-deco" src="art/d_star.svg" alt="" style="left: 430px; top: 64px; width: 48px;">
+<img class="sh-deco" src="art/d_sparkle.svg" alt="" style="left: 482px; top: 196px; width: 32px; animation-delay: -2.5s;">
+<h1 class="h1-wrap"><span class="pill glass enter"><span class="pulse"></span>Детский развивающий центр в Томске<span class="pill-y"> · с 2021 года</span></span><span class="h1 enter" style="animation-delay: 80ms;"><span class="h1-l">Пойдём</span><span class="h1-l h1-l2">играть!</span></span></h1>
+<p class="lead enter" style="animation-delay: 160ms;">Развивающие занятия для детей от 1 года до 10 лет — для успевающих родителей, которые хотят воспитать самостоятельных детей.</p>
+<div class="qa-wrap enter" style="animation-delay: 240ms;">
+<div class="hero-masc" aria-hidden="true"><span class="bubble hand">начните отсюда!</span><img class="hm-img" src="art/m_point.svg" alt="" width="108" height="125"></div>
+<div class="qa glass">
+<div class="qa-t">Сколько лет вашему ребёнку?</div>
+<div class="qa-row">
+<a class="qa-b qa-baby" href="#picker" aria-label="1 год — показать занятия"><span>1</span></a><a class="qa-b qa-baby" href="#picker" aria-label="2 года — показать занятия"><span>2</span></a><a class="qa-b qa-baby" href="#picker" aria-label="3 года — показать занятия"><span>3</span></a><a class="qa-b qa-pre" href="#picker" aria-label="4 года — показать занятия"><span>4</span></a><a class="qa-b qa-pre" href="#picker" aria-label="5 лет — показать занятия"><span>5</span></a><a class="qa-b qa-pre" href="#picker" aria-label="6 лет — показать занятия"><span>6</span></a><a class="qa-b qa-school" href="#picker" aria-label="7 лет — показать занятия"><span>7</span></a><a class="qa-b qa-school" href="#picker" aria-label="8 лет — показать занятия"><span>8</span></a><a class="qa-b qa-school" href="#picker" aria-label="9 лет — показать занятия"><span>9</span></a><a class="qa-b qa-school" href="#picker" aria-label="10 лет — показать занятия"><span>10</span></a>
+</div>
+<div class="qa-or">
+<span>Не хотите выбирать сами?</span>
+<a class="lnk" href="#picker">Пройдите анкету — 5 вопросов<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="hero-links enter" style="animation-delay: 320ms;">
+<a class="btn btn-p" href="#picker">Подобрать занятие<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M6 13l6 6 6-6"></path></svg></a>
+<a class="btn btn-g" href="tel:+79959137909"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>+7 995 913 79 09</a>
+</div>
+</div>
+
+<div class="stage" aria-hidden="true">
+<div class="blob" style="left: 4%; top: 6%; width: 340px; height: 340px; background: radial-gradient(circle, rgba(234, 32, 80, 0.6), rgba(234, 32, 80, 0) 68%);"></div>
+<div class="blob" style="right: 0px; top: 34%; width: 340px; height: 340px; background: radial-gradient(circle, rgba(92, 191, 204, 0.5), rgba(92, 191, 204, 0) 68%); animation-delay: -6s;"></div>
+<div class="blob" style="left: 28%; bottom: 0px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(250, 151, 34, 0.6), rgba(250, 151, 34, 0) 68%); animation-delay: -12s;"></div>
+<div class="disc glass"><div class="disc-ring"></div></div>
+<div class="hcastle"><span class="hc-shadow"></span><svg class="lg hc-svg" viewBox="542 5 2182 2227" aria-hidden="true" focusable="false">
+<g class="lg-in lg-c lc0"><use href="#lgc0"></use></g><g class="lg-in lg-c lc1 lj1"><use class="lg-l" href="#lgc1"></use></g><g class="lg-in lg-c lc2 lj2"><use class="lg-l" href="#lgc2"></use></g><g class="lg-in lg-c lc3 lj3"><use class="lg-l" href="#lgc3"></use></g><g class="lg-in lg-c lc4 lj4"><use class="lg-l" href="#lgc4"></use></g><g class="lg-in lg-c lc5 lj5"><use class="lg-l" href="#lgc5"></use></g><g class="lg-in lg-c lc6 lj6"><use class="lg-l" href="#lgc6"></use></g><g class="lg-in lg-c lc7 lj7"><use class="lg-l" href="#lgc7"></use></g><g class="lg-in lg-c lc8 lj8"><use class="lg-l" href="#lgc8"></use></g>
+<g class="lg-in lg-fi lg-fi-left"><use class="lg-f lg-f-left" href="#lgf-left"></use></g><g class="lg-in lg-fi lg-fi-center"><use class="lg-f lg-f-center" href="#lgf-center"></use></g><g class="lg-in lg-fi lg-fi-right"><use class="lg-f lg-f-right" href="#lgf-right"></use></g>
+</svg></div>
+<div class="s3">
+<div class="world">
+<div class="lcw" style="transform: translate3d(-250px, -250px, 70px);"><div class="lcf"><div class="lcube">
+<div class="lf" style="background: rgb(234, 32, 80); transform: translateZ(27px);">А</div>
+<div class="lf" style="background: rgb(216, 27, 71); transform: rotateY(90deg) translateZ(27px);">Б</div>
+<div class="lf" style="background: rgb(201, 23, 63); transform: rotateY(180deg) translateZ(27px);">В</div>
+<div class="lf" style="background: rgb(226, 38, 79); transform: rotateY(-90deg) translateZ(27px);">Г</div>
+<div class="lf" style="background: rgb(242, 82, 117); transform: rotateX(90deg) translateZ(27px);">Д</div>
+<div class="lf" style="background: rgb(184, 21, 57); transform: rotateX(-90deg) translateZ(27px);">Е</div>
+</div></div></div>
+<div class="lcw" style="transform: translate3d(200px, -320px, -40px);"><div class="lcf" style="animation-delay: -2s;"><div class="lcube" style="animation-duration: 22s; animation-direction: reverse;">
+<div class="lf" style="background: rgb(92, 191, 204); transform: translateZ(27px);">1</div>
+<div class="lf" style="background: rgb(77, 176, 189); transform: rotateY(90deg) translateZ(27px);">2</div>
+<div class="lf" style="background: rgb(67, 163, 176); transform: rotateY(180deg) translateZ(27px);">3</div>
+<div class="lf" style="background: rgb(85, 184, 197); transform: rotateY(-90deg) translateZ(27px);">4</div>
+<div class="lf" style="background: rgb(127, 208, 218); transform: rotateX(90deg) translateZ(27px);">5</div>
+<div class="lf" style="background: rgb(58, 149, 161); transform: rotateX(-90deg) translateZ(27px);">6</div>
+</div></div></div>
+<div class="lcw" style="transform: translate3d(220px, -110px, 120px);"><div class="lcf" style="animation-delay: -4s;"><div class="lcube" style="animation-duration: 26s;">
+<div class="lf" style="background: rgb(148, 183, 7); transform: translateZ(27px);">Я</div>
+<div class="lf" style="background: rgb(134, 166, 6); transform: rotateY(90deg) translateZ(27px);">Ж</div>
+<div class="lf" style="background: rgb(122, 151, 5); transform: rotateY(180deg) translateZ(27px);">З</div>
+<div class="lf" style="background: rgb(141, 175, 6); transform: rotateY(-90deg) translateZ(27px);">И</div>
+<div class="lf" style="background: rgb(176, 210, 58); transform: rotateX(90deg) translateZ(27px);">К</div>
+<div class="lf" style="background: rgb(110, 136, 4); transform: rotateX(-90deg) translateZ(27px);">Л</div>
+</div></div></div>
+</div>
+</div>
+<div class="stk glass" style="left: 0px; top: 10%;">
+<img class="stk-img" src="art/blocks.svg" alt="">
+<span><span class="stk-n">20+</span><span class="stk-s">направлений</span></span>
+</div>
+<div class="stk glass" style="right: 0px; top: 48%; animation-delay: -3s;">
+<img class="stk-img" src="art/apple.svg" alt="">
+<span><span class="stk-n">14</span><span class="stk-s">педагогов</span></span>
+</div>
+<div class="stk glass" style="left: 4%; bottom: 0px; animation-delay: -5s;">
+<img class="stk-img" src="art/calendar.svg" alt="">
+<span><span class="stk-n">Набор открыт</span><span class="stk-s">на 2026–27 учебный год</span></span>
+</div>
+</div>
+</section>
+
+<section class="sec" id="picker">
+<div class="blob" style="left: -240px; top: 140px; width: 640px; height: 640px; background: radial-gradient(circle, rgba(158, 91, 177, 0.26), rgba(158, 91, 177, 0) 68%);"></div>
+<div class="blob" style="right: -220px; top: 820px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(92, 191, 204, 0.24), rgba(92, 191, 204, 0) 68%); animation-delay: -10s;"></div>
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow">Подбор занятий</span>
+<img class="sh-deco" src="art/d_confetti.svg" alt="" style="right: 0px; top: -44px; width: 68px;">
+<h2 class="h2">Найдём занятия под возраст и задачи ребёнка</h2>
+<p class="sub">Соберите подборку сами — или ответьте на 5 вопросов анкеты, и мы подберём занятия за вас.</p>
+</div>
+
+<div class="panel glass" data-row="panel">
+<div class="modes" data-row="mode" role="group" aria-label="Способ подбора">
+<div class="bead" aria-hidden="true" style="border-radius: 16px; inset: 6px 313px 6px 6px; opacity: 1; transition: none;">
+<div class="bead-ghost modes-g" style="left: -6px; top: -6px; width: 620px; height: 66px; transition: none;">
+<span class="mode mode-g"><svg class="i" viewBox="0 0 24 24"><path d="M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M14 4v4 M8 10v4 M16 16v4"></path></svg>Выбрать самому</span>
+<span class="mode mode-g"><svg class="i" viewBox="0 0 24 24"><path d="M9 4h6v3H9z M7 5H5v16h14V5h-2 M9 12l2 2 4-4 M9 17h6"></path></svg>Подобрать по анкете</span>
+</div>
+</div>
+<button class="mode" type="button" data-on="1" aria-pressed="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M14 4v4 M8 10v4 M16 16v4"></path></svg>Выбрать самому</button>
+<button class="mode" type="button" data-on="0" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9z M7 5H5v16h14V5h-2 M9 12l2 2 4-4 M9 17h6"></path></svg>Подобрать по анкете</button>
+</div>
+
+
+<div>
+<div class="step"><span class="step-n">1</span><h3 class="step-t">Сколько лет ребёнку?</h3></div>
+<p class="step-h">Нажмите на кубик или на цифру — лесенка подрастёт вместе с ребёнком</p>
+<div class="bars">
+<button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 22px;"><span class="b3-t" style="top: -4px; transform: rotateX(90deg) translateZ(11px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 36px;"><span class="b3-t" style="top: 3px; transform: rotateX(90deg) translateZ(18px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on" style="height: 50px;"><span class="b3-t" style="top: 10px; transform: rotateX(90deg) translateZ(25px); background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(238, 74, 120); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 on sel" style="height: 64px;"><span class="b3-t" style="top: 17px; transform: rotateX(90deg) translateZ(32px); background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgb(250, 151, 34); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 78px;"><span class="b3-t" style="top: 24px; transform: rotateX(90deg) translateZ(39px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 92px;"><span class="b3-t" style="top: 31px; transform: rotateX(90deg) translateZ(46px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 106px;"><span class="b3-t" style="top: 38px; transform: rotateX(90deg) translateZ(53px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 120px;"><span class="b3-t" style="top: 45px; transform: rotateX(90deg) translateZ(60px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 134px;"><span class="b3-t" style="top: 52px; transform: rotateX(90deg) translateZ(67px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button><button class="bar-col" type="button" tabindex="-1" aria-hidden="true"><span class="b3 off" style="height: 148px;"><span class="b3-t" style="top: 59px; transform: rotateX(90deg) translateZ(74px); background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-r" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span><span class="b3-f" style="background-color: rgba(255, 255, 255, 0.82); transition-delay: 0ms;"></span></span></button>
+<div class="mpos" style="left: calc(35% - 1.2px); bottom: 72px;">
+<div class="masc hopA">
+<div class="m-tip"><span>4 года</span></div>
+<img class="masc-img" src="art/m_stand.svg" alt="" width="64" height="74">
+</div>
+</div>
+</div>
+<div class="ages ages-grid" data-row="age" role="group" aria-label="Возраст ребёнка">
+<div class="bead" aria-hidden="true" style="border-radius: 16px; inset: 0px 661px 0px 331px; opacity: 1; transition: none;">
+<div class="bead-ghost ages-grid" style="left: -331px; top: 0px; width: 1094px; height: 58px; transition: none;">
+<span class="age-l age-g"><span class="age-n"><span>1</span></span><span class="age-u"><span>год</span></span></span><span class="age-l age-g"><span class="age-n"><span>2</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>3</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>4</span></span><span class="age-u"><span>года</span></span></span><span class="age-l age-g"><span class="age-n"><span>5</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>6</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>7</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>8</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>9</span></span><span class="age-u"><span>лет</span></span></span><span class="age-l age-g"><span class="age-n"><span>10</span></span><span class="age-u"><span>лет</span></span></span>
+</div>
+</div>
+<button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>1</span></span><span class="age-u"><span>год</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>2</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>3</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="1" aria-pressed="true"><span class="age-n"><span>4</span></span><span class="age-u"><span>года</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>5</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>6</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>7</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>8</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>9</span></span><span class="age-u"><span>лет</span></span></button><button class="age-l " type="button" data-on="0" aria-pressed="false"><span class="age-n"><span>10</span></span><span class="age-u"><span>лет</span></span></button>
+</div>
+<div class="bands">
+<button class="band " type="button" style="grid-column: 1 / 4;"><span class="band-line" style="background: linear-gradient(90deg, rgb(255, 143, 170), rgb(238, 74, 120));"></span><span class="band-n">Малыши</span><span class="band-s">1–3 года</span></button>
+<button class="band on" type="button" style="grid-column: 4 / 7;"><span class="band-line" style="background: linear-gradient(90deg, rgb(255, 192, 105), rgb(250, 151, 34));"></span><span class="band-n">Дошкольники</span><span class="band-s">4–6 лет</span></button>
+<button class="band " type="button" style="grid-column: 7 / 11;"><span class="band-line" style="background: linear-gradient(90deg, rgb(142, 214, 223), rgb(79, 179, 194));"></span><span class="band-n">Школьники</span><span class="band-s">7–10 лет · 1–4 класс</span></button>
+</div>
+<div class="tip"><span class="tip-i"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6 M10 21h4 M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"></path></svg></span><span><span>К школе готовимся по ступеням: комплексные занятия в 3–5 лет, затем подготовка к школе — 1 ступень (5–6 лет) и 2 ступень (6–7 лет).</span></span></div>
+
+<div class="divider"></div>
+
+<div class="step"><span class="step-n">2</span><h3 class="step-t">Какие задачи решаем?</h3></div>
+<p class="step-h">Отметьте одну или несколько — подберём занятия, которые закрывают сразу несколько задач</p>
+<div class="chips" role="group" aria-label="Задачи для ребёнка">
+<button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/speech.svg" alt="" width="30" height="30"><span class="chip-l"><span>Речь</span></span><span class="chip-c"><span>3</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/kg.svg" alt="" width="30" height="30"><span class="chip-l"><span>Подготовка к саду</span></span><span class="chip-c"><span>0</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/school.svg" alt="" width="30" height="30"><span class="chip-l"><span>Подготовка к школе</span></span><span class="chip-c"><span>4</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/read.svg" alt="" width="30" height="30"><span class="chip-l"><span>Чтение и письмо</span></span><span class="chip-c"><span>3</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/art.svg" alt="" width="30" height="30"><span class="chip-l"><span>Творчество</span></span><span class="chip-c"><span>3</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/music.svg" alt="" width="30" height="30"><span class="chip-l"><span>Музыка</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/health.svg" alt="" width="30" height="30"><span class="chip-l"><span>Здоровье и осанка</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/logic.svg" alt="" width="30" height="30"><span class="chip-l"><span>Логика и мышление</span></span><span class="chip-c"><span>3</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/study.svg" alt="" width="30" height="30"><span class="chip-l"><span>Помощь с учёбой</span></span><span class="chip-c"><span>0</span></span></button><button class="chip  dis" type="button" aria-pressed="false" disabled=""><img class="chip-img" src="art/self.svg" alt="" width="30" height="30"><span class="chip-l"><span>Самостоятельность</span></span><span class="chip-c"><span>0</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/social.svg" alt="" width="30" height="30"><span class="chip-l"><span>Общение и друзья</span></span><span class="chip-c"><span>1</span></span></button><button class="chip " type="button" aria-pressed="false"><img class="chip-img" src="art/care.svg" alt="" width="30" height="30"><span class="chip-l"><span>Присмотр</span></span><span class="chip-c"><span>1</span></span></button>
+</div>
+<div class="chips-foot">
+<span class="hand"><span>можно выбрать несколько!</span></span>
+
+<a class="btn btn-p btn-sm only-sm" href="#res">Показать <span>12</span> <span>занятий</span></a>
+</div>
+
+<div class="divider"></div>
+
+<div class="res-wrap">
+<div class="res-head" id="res">
+<div>
+<div class="res-t" aria-live="polite"><span class="res-n"><span>12</span></span> <span>занятий</span> для ребёнка <span>4 лет</span></div>
+<div class="res-s"><span>Все направления</span></div>
+</div>
+<div class="legend">
+<span class="lg"><span class="lg-dot"></span>возраст ребёнка</span>
+<span class="lg"><span class="lg-bar"></span>возраст группы</span>
+<a class="btn btn-g btn-sm" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4"></path></svg>Расписание</a>
+</div>
+</div>
+
+
+
+
+
+<div class="grid">
+
+<article class="card ga" style="animation-delay: 0ms;">
+<img class="card-sc" src="art/sc_speech.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(234, 32, 80);"></span>
+<span class="cat"><span>Речь</span></span>
+
+</div>
+<h4 class="card-t"><span>Логопед, дефектолог, логомассаж</span></h4>
+<p class="card-d"><span>Корректируем речь</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: от 3,5 года. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 25%; width: 75%; background: rgb(234, 32, 80);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>от 3,5 года</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/logopedicheskiy-massaj-logoped" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 45ms;">
+<img class="card-sc" src="art/sc_school.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(158, 91, 177);"></span>
+<span class="cat"><span>Подготовка к школе</span></span>
+
+</div>
+<h4 class="card-t"><span>Комплексное занятие 3–4 года</span></h4>
+<p class="card-d"><span>Всестороннее развитие в одном занятии</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3–4 года. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 20%; width: 20%; background: rgb(158, 91, 177);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3–4 года</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/kompleks-3-4" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 90ms;">
+<img class="card-sc" src="art/sc_school.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(158, 91, 177);"></span>
+<span class="cat"><span>Подготовка к школе</span></span>
+
+</div>
+<h4 class="card-t"><span>Комплексное занятие 4–5 лет</span></h4>
+<p class="card-d"><span>Всестороннее развитие в одном занятии</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 4–5 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 30%; width: 20%; background: rgb(158, 91, 177);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>4–5 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/kompleks-4-5" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 135ms;">
+<img class="card-sc" src="art/sc_read.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(37, 99, 235);"></span>
+<span class="cat"><span>Чтение и письмо</span></span>
+<span class="fmt"><span>в группе</span></span>
+</div>
+<h4 class="card-t"><span>Обучение чтению в группе</span></h4>
+<p class="card-d"><span>Учим азбуку играючи</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 4–8 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 30%; width: 50%; background: rgb(37, 99, 235);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>4–8 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/obuchenie-chteniu-4-8-let-gruppa" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 180ms;">
+<img class="card-sc" src="art/sc_read.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(37, 99, 235);"></span>
+<span class="cat"><span>Чтение и письмо</span></span>
+<span class="fmt"><span>индивидуально</span></span>
+</div>
+<h4 class="card-t"><span>Обучение чтению индивидуально</span></h4>
+<p class="card-d"><span>Учим азбуку играючи</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: от 4 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 30%; width: 70%; background: rgb(37, 99, 235);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>от 4 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/obuchenie-chteniu-4-8-let-individualno" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 225ms;">
+<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
+<span class="cat"><span>Творчество</span></span>
+
+</div>
+<h4 class="card-t"><span>Творчество для малышей</span></h4>
+<p class="card-d"><span>ИЗО и лепка: рисуем, лепим, познаём мир</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 2,5–4 года. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 15%; width: 25%; background: rgb(234, 88, 12);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>2,5–4 года</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/lepka-25-4-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 270ms;">
+<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
+<span class="cat"><span>Творчество</span></span>
+
+</div>
+<h4 class="card-t"><span>ИЗО</span></h4>
+<p class="card-d"><span>Рисуем и познаём мир</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–5 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 25%; width: 25%; background: rgb(234, 88, 12);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3,5–5 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/izo-35-5-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 315ms;">
+<img class="card-sc" src="art/sc_art.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(234, 88, 12);"></span>
+<span class="cat"><span>Творчество</span></span>
+
+</div>
+<h4 class="card-t"><span>Лепка</span></h4>
+<p class="card-d"><span>Лепим и развиваем моторику рук</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 4–8 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 30%; width: 50%; background: rgb(234, 88, 12);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>4–8 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/lepka-4-8-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 360ms;">
+<img class="card-sc" src="art/sc_music.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(176, 76, 184);"></span>
+<span class="cat"><span>Музыка</span></span>
+
+</div>
+<h4 class="card-t"><span>Музыкальная азбука</span></h4>
+<p class="card-d"><span>Учим азбуку через музыку</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3–5 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 20%; width: 30%; background: rgb(176, 76, 184);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3–5 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/azbuka-3-5" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 405ms;">
+<img class="card-sc" src="art/sc_health.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(22, 163, 74);"></span>
+<span class="cat"><span>Здоровье и осанка</span></span>
+
+</div>
+<h4 class="card-t"><span>Оздоровительная гимнастика</span></h4>
+<p class="card-d"><span>Формируем здоровую осанку у дошкольников</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–5 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 25%; width: 25%; background: rgb(22, 163, 74);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3,5–5 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/ozdorovitelnaya-gimnastika" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 405ms;">
+<img class="card-sc" src="art/sc_logic.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(79, 70, 229);"></span>
+<span class="cat"><span>Логика и мышление</span></span>
+
+</div>
+<h4 class="card-t"><span>Легоконструирование</span></h4>
+<p class="card-d"><span>Конструируем из лего</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3,5–7 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 25%; width: 45%; background: rgb(79, 70, 229);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3,5–7 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/legokonstruirovanie" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+<article class="card ga" style="animation-delay: 405ms;">
+<img class="card-sc" src="art/sc_care.svg" alt="" width="260" height="100">
+<div class="card-top">
+<span class="cat-dot" style="background: rgb(217, 119, 6);"></span>
+<span class="cat"><span>Присмотр</span></span>
+<span class="fmt"><span>по выходным</span></span>
+</div>
+<h4 class="card-t"><span>Группа выходного дня</span></h4>
+<p class="card-d"><span>Займём детей на выходных</span></p>
+
+<div class="ab">
+<div class="ab-tr" role="img" aria-label="Возраст группы: 3–6 лет. Вашему ребёнку 4 года">
+<span class="ab-seg" style="left: 20%; width: 40%; background: rgb(217, 119, 6);"></span>
+<span class="ab-ticks"></span>
+<span class="ab-dot" style="left: 35%;"></span>
+</div>
+<div class="ab-row"><span class="ab-l"><span>3–6 лет</span></span></div>
+</div>
+<div class="card-f">
+<a class="more" href="https://poidemigrat.ru/gruppa-vihodnogo-dnya-3-6-let" target="_blank" rel="noopener">Подробнее<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+<button class="pk " type="button" aria-pressed="false"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg><span>В подборку</span></button>
+</div>
+</article>
+
+</div>
+
+<div class="dock">
+
+<div class="mbar glass"><span class="mbar-t"><b><span>12</span> <span>занятий</span></b> · <span>4 года</span></span><a class="btn btn-g btn-sm" href="#picker">Изменить</a></div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</section>
+
+<section class="sec" id="news">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow">Сейчас в центре</span>
+<img class="sh-deco" src="art/d_heart.svg" alt="" style="left: 462px; top: 50px; width: 46px; animation-delay: -3s;">
+<h2 class="h2">Акции и события</h2>
+</div>
+<div class="bento">
+<a class="bt bt-ny reveal" href="https://poidemigrat.ru/new-year-2027" target="_blank" rel="noopener">
+<img class="ny-bg" src="photos/ny-banner.jpg" alt="" loading="lazy">
+<span class="snow" style="left: 6%; width: 6px; height: 6px; animation-duration: 7s; animation-delay: -1s;"></span>
+<span class="snow" style="left: 14%; width: 4px; height: 4px; animation-duration: 9s; animation-delay: -5s;"></span>
+<span class="snow" style="left: 22%; width: 8px; height: 8px; animation-duration: 8s; animation-delay: -3s;"></span>
+<span class="snow" style="left: 31%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: -7s;"></span>
+<span class="snow" style="left: 40%; width: 7px; height: 7px; animation-duration: 7.5s; animation-delay: -2s;"></span>
+<span class="snow" style="left: 49%; width: 4px; height: 4px; animation-duration: 9.5s; animation-delay: -6s;"></span>
+<span class="snow" style="left: 57%; width: 6px; height: 6px; animation-duration: 8.5s; animation-delay: -4s;"></span>
+<span class="snow" style="left: 65%; width: 5px; height: 5px; animation-duration: 11s; animation-delay: -9s;"></span>
+<span class="snow" style="left: 73%; width: 8px; height: 8px; animation-duration: 7s; animation-delay: -0.5s;"></span>
+<span class="snow" style="left: 81%; width: 4px; height: 4px; animation-duration: 9s; animation-delay: -3.5s;"></span>
+<span class="snow" style="left: 89%; width: 6px; height: 6px; animation-duration: 10s; animation-delay: -8s;"></span>
+<span class="tag" style="background: rgba(255, 255, 255, 0.16); color: rgb(255, 255, 255);">Билеты уже в продаже</span>
+<h3 class="bt-h" style="font-size: 46px; max-width: 380px;">Новогодние ёлки</h3>
+<p class="bt-p" style="max-width: 255px; color: rgba(255, 255, 255, 0.92);">Волшебные интерактивные представления, встречи со сказочными героями и подарки от Дедушки Мороза.</p>
+<span class="bt-go ny-go">Смотреть программы<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="bt bt-set glass reveal" href="#picker">
+<span class="tag" style="background: rgb(243, 230, 247); color: rgb(91, 41, 103);">Открыт набор</span>
+<div class="bt-row">
+<div style="max-width: 300px;">
+<h3 class="bt-h">Курсы на учебный год</h3>
+<p class="bt-p" style="color: rgb(94, 74, 107); margin-top: 8px;">Подберите занятия по возрасту и задачам ребёнка.</p>
+</div>
+<div class="big-yr">2026–27</div>
+</div>
+<span class="bt-go" style="color: rgb(106, 47, 130);">Подобрать занятие<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a class="bt glass reveal" href="https://poidemigrat.ru/kanikulyrnaz-ploshadka" target="_blank" rel="noopener">
+<div class="bt-top">
+<img class="art-lg" src="art/kite.svg" alt="">
+<span class="tag" style="background: rgb(255, 239, 217); color: rgb(138, 65, 0);">6–10 лет</span>
+</div>
+<h3 class="bt-h">Каникулярная площадка</h3>
+<p class="bt-p" style="color: rgb(94, 74, 107);">Набор на осенние каникулы: весёлое пребывание школьников в центре.</p>
+</a>
+<a class="bt glass reveal" href="https://poidemigrat.ru/prodlenka-smena-1" target="_blank" rel="noopener">
+<div class="bt-top">
+<img class="art-lg" src="art/clock.svg" alt="">
+<span class="tag" style="background: rgb(225, 238, 255); color: rgb(30, 64, 175);">1–4 класс</span>
+</div>
+<h3 class="bt-h">Продлёнка</h3>
+<p class="bt-p" style="color: rgb(94, 74, 107);">С 12:30 до 18:00 — делаем уроки и весело проводим время после школы.</p>
+</a>
+<a class="bt bt-mk glass reveal" href="https://vk.com/poidem_igrat" target="_blank" rel="noopener">
+<div class="mk-l">
+<img class="art-lg" src="art/craft.svg" alt="">
+<div>
+<h3 class="bt-h" style="font-size: 23px;">Каждый месяц — новые мероприятия и мастер-классы</h3>
+<p class="bt-p" style="color: rgb(94, 74, 107); margin-top: 6px;">Анонсы и фото — в нашей группе ВКонтакте</p>
+</div>
+</div>
+<span class="btn btn-g btn-sm">Открыть VK<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></span>
+</a>
+</div>
+</div>
+</section>
+
+<section class="sec" id="about">
+<div class="blob" style="right: -160px; top: 40px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(148, 183, 7, 0.2), rgba(148, 183, 7, 0) 68%);"></div>
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow">О нас</span>
+<img class="why-masc" src="art/m_jump.svg" alt="" width="150" height="174">
+<h2 class="h2">Почему нас любят дети и родители</h2>
+<p class="sub">С 2021 года мы создаём место, где каждый ребёнок чувствует себя особенным. Больше 20 направлений — от малышей до школьников.</p>
+</div>
+<div class="why">
+<div class="wy glass reveal">
+<img class="art-lg" src="art/apple.svg" alt="">
+<h3 class="wy-t">Внимательные педагоги</h3>
+<p class="wy-p">Профессионалы, которые всегда готовы помочь, поддержать и найти подход к каждому ребёнку.</p>
+</div>
+<div class="wy glass reveal">
+<img class="art-lg" src="art/sun.svg" alt="">
+<h3 class="wy-t">Тёплая атмосфера</h3>
+<p class="wy-p">Дружелюбно и уютно — каждый ребёнок найдёт себе занятие по душе.</p>
+</div>
+<div class="wy glass reveal">
+<img class="art-lg" src="art/rosette.svg" alt="">
+<h3 class="wy-t">Индивидуальный подход</h3>
+<p class="wy-p">Внимание к каждому ребёнку — главный принцип нашей работы.</p>
+</div>
+<div class="wy glass reveal">
+<img class="art-lg" src="art/blocks.svg" alt="">
+<h3 class="wy-t">Учимся играя</h3>
+<p class="wy-p">Чтение, творчество, подготовка к саду и школе — легко и весело, через игру.</p>
+</div>
+</div>
+<div class="life reveal">
+<div class="life-head">
+<div><span class="life-hand">живые кадры из центра</span><h3 class="life-t">Так проходят наши дни</h3></div>
+<a class="btn btn-g btn-sm" href="https://vk.ru/albums-208735857" target="_blank" rel="noopener">Больше 20 000 фото во ВКонтакте<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+</div>
+<div class="wall">
+<a class="pol" href="https://vk.ru/photo-208735857_457245913" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457245913.jpg" alt="Девочка показывает поделку с творческого мастер-класса" loading="lazy"><span class="pol-cap"><span>творческий мастер-класс</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457243404" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457243404.jpg" alt="Мамы с малышами на интерактивном спектакле" loading="lazy"><span class="pol-cap"><span>сказка для малышей и мам</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457242137" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457242137.jpg" alt="Дети раскатывают тесто и вырезают пряники" loading="lazy"><span class="pol-cap"><span>кулинарный мастер-класс</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457239399" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457239399.jpg" alt="Малышка на занятии «Малыш и мама»" loading="lazy"><span class="pol-cap"><span>«Малыш и мама»</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457248290" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457248290.jpg" alt="Дети с аниматорами на празднике" loading="lazy"><span class="pol-cap"><span>праздник со сказочными героями</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457239298" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457239298.jpg" alt="Малыши играют с мячиками" loading="lazy"><span class="pol-cap"><span>играем и знакомимся</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457248297" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457248297.jpg" alt="Девочка в кокошнике на празднике в центре" loading="lazy"><span class="pol-cap"><span>праздник в народных костюмах</span></span></a><a class="pol" href="https://vk.ru/photo-208735857_457239593" target="_blank" rel="noopener"><span class="pol-tape"></span><img class="pol-img" src="photos/vk_457239593.jpg" alt="Мамы и малыши играют с сенсорной коробкой" loading="lazy"><span class="pol-cap"><span>сенсорные игры с мамой</span></span></a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="team">
+<div class="wrap">
+<div class="row-head reveal">
+<div>
+<span class="eyebrow">Наша команда</span>
+<h2 class="h2">14 педагогов, которые любят детей</h2>
+</div>
+<div class="arrows">
+<button class="arw" type="button" aria-label="Листать назад"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button class="arw" type="button" aria-label="Листать вперёд"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div class="team" data-row="team">
+
+<a class="tm glass" href="https://poidemigrat.ru/miller" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(255, 154, 198), rgb(176, 76, 184));"><img class="tm-img" src="team/miller.jpg" alt="Виктория Владимировна Миллер" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Виктория Владимировна Миллер</span></span>
+<span class="tm-r"><span>Руководитель центра</span></span>
+<span class="tm-tags"><span class="tgg"><span>«Малыш и мама»</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/bulantseva" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(201, 154, 216), rgb(123, 58, 147));"><img class="tm-img" src="team/bulantseva.jpg" alt="Анастасия Денисовна Буланцева" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Анастасия Денисовна Буланцева</span></span>
+<span class="tm-r"><span>Методист и администратор</span></span>
+<span class="tm-tags"><span class="tgg"><span>Подготовка к школе</span></span><span class="tgg"><span>Чтение</span></span><span class="tgg"><span>Каллиграфия</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/alyieva" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(253, 186, 116), rgb(234, 88, 12));"><img class="tm-img" src="team/alyieva.jpg" alt="Гюнель Гасильевна Алыева" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Гюнель Гасильевна Алыева</span></span>
+<span class="tm-r"><span>Администратор</span></span>
+<span class="tm-tags"><span class="tgg"><span>Театральная студия</span></span><span class="tgg"><span>Хореография</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/morozova" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(110, 231, 183), rgb(5, 150, 105));"><img class="tm-img" src="team/morozova.jpg" alt="Екатерина Максимовна Морозова" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Екатерина Максимовна Морозова</span></span>
+<span class="tm-r"><span>Подготовка к школе и начальные классы</span></span>
+<span class="tm-tags"><span class="tgg"><span>Чтение</span></span><span class="tgg"><span>Финграмотность</span></span><span class="tgg"><span>Продлёнка</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/kustova" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(147, 197, 253), rgb(37, 99, 235));"><img class="tm-img" src="team/kustova.jpg" alt="Валерия Викторовна Кустова" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Валерия Викторовна Кустова</span></span>
+<span class="tm-r"><span>Логопед центра</span></span>
+<span class="tm-tags"><span class="tgg"><span>«Говорилка»</span></span><span class="tgg"><span>«Я сам»</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/ryabets" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(249, 168, 212), rgb(234, 32, 80));"><img class="tm-img" src="team/ryabets.jpg" alt="Светлана Юрьевна Рябец" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Светлана Юрьевна Рябец</span></span>
+<span class="tm-r"><span>Группа кратковременного пребывания</span></span>
+<span class="tm-tags"><span class="tgg"><span>«Я сам»</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/tsetsulina" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(253, 186, 116), rgb(234, 88, 12));"><img class="tm-img" src="team/tsetsulina.jpg" alt="Ирина Николаевна Цецулина" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Ирина Николаевна Цецулина</span></span>
+<span class="tm-r"><span>Творческие направления</span></span>
+<span class="tm-tags"><span class="tgg"><span>ИЗО</span></span><span class="tgg"><span>Лепка</span></span><span class="tgg"><span>Продлёнка</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/osadcheva" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(249, 168, 212), rgb(234, 32, 80));"><img class="tm-img" src="team/osadcheva.jpg" alt="Екатерина Сергеевна Осадчева" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Екатерина Сергеевна Осадчева</span></span>
+<span class="tm-r"><span>Комплексные занятия 3–4 года</span></span>
+<span class="tm-tags"><span class="tgg"><span>Скорочтение</span></span><span class="tgg"><span>Каллиграфия</span></span><span class="tgg"><span>Репетитор</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/postnova" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(110, 231, 183), rgb(5, 150, 105));"><img class="tm-img" src="team/postnova.jpg" alt="Татьяна Владимировна Постнова" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Татьяна Владимировна Постнова</span></span>
+<span class="tm-r"><span>Оздоровительная гимнастика</span></span>
+<span class="tm-tags"><span class="tgg"><span>Осанка</span></span><span class="tgg"><span>Гимнастика</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/romashova" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(201, 154, 216), rgb(123, 58, 147));"><img class="tm-img" src="team/romashova.jpg" alt="Екатерина Павловна Ромашова" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Екатерина Павловна Ромашова</span></span>
+<span class="tm-r"><span>Музыкальные занятия</span></span>
+<span class="tm-tags"><span class="tgg"><span>«Живые нотки»</span></span><span class="tgg"><span>Музыкальная азбука</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/sedletskaya" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(147, 197, 253), rgb(37, 99, 235));"><img class="tm-img" src="team/sedletskaya.jpg" alt="Виктория Юрьевна Седлецкая" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Виктория Юрьевна Седлецкая</span></span>
+<span class="tm-r"><span>Логопед центра</span></span>
+<span class="tm-tags"><span class="tgg"><span>Речь</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/kovanskaya" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(94, 234, 212), rgb(14, 116, 144));"><img class="tm-img" src="team/kovanskaya.jpg" alt="Алена Андреевна Кованская" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Алена Андреевна Кованская</span></span>
+<span class="tm-r"><span>Логопед центра</span></span>
+<span class="tm-tags"><span class="tgg"><span>Речь</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/manabaeva" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(253, 186, 116), rgb(234, 88, 12));"><img class="tm-img" src="team/manabaeva.jpg" alt="Наталья Сергеевна Манабаева" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Наталья Сергеевна Манабаева</span></span>
+<span class="tm-r"><span>Мастер кулинарных шедевров</span></span>
+<span class="tm-tags"><span class="tgg"><span>Кухня центра</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm glass" href="https://poidemigrat.ru/anikina" target="_blank" rel="noopener">
+<span class="tm-ph" style="background: linear-gradient(150deg, rgb(94, 234, 212), rgb(14, 116, 144));"><img class="tm-img" src="team/anikina.jpg" alt="Милана Эльхановна Аникина" loading="lazy"><span class="tm-lbl"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Видео-знакомство</span></span>
+<span class="tm-b">
+<span class="tm-n"><span>Милана Эльхановна Аникина</span></span>
+<span class="tm-r"><span>Педагог сенсорики</span></span>
+<span class="tm-tags"><span class="tgg"><span>«Я сам»</span></span><span class="tgg"><span>Сенсорное развитие</span></span></span>
+<span class="tm-more">Подробнее и видео<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
+</span>
+</a>
+
+<a class="tm tm-all" href="https://poidemigrat.ru/" target="_blank" rel="noopener">
+<span class="tm-in" style="font-size: 56px;">14</span>
+<span class="tm-n">Вся команда на сайте</span>
+<span class="tm-r" style="color: rgba(255, 255, 255, 0.88);">Видео-знакомства и подробности о каждом педагоге</span>
+</a>
+</div>
+<p class="fine">*Все данные сотрудников размещены с их согласия</p>
+</div>
+</section>
+
+<section class="sec" id="reviews">
+<div class="blob" style="left: -200px; top: 120px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(250, 151, 34, 0.24), rgba(250, 151, 34, 0) 68%);"></div>
+<div class="wrap">
+<div class="row-head reveal" style="margin-bottom: 32px;">
+<div>
+<span class="eyebrow">Отзывы</span>
+<img class="sh-deco" src="art/d_squiggle.svg" alt="" style="left: 610px; top: 52px; width: 60px; animation-delay: -1.5s;">
+<h2 class="h2">Что говорят родители</h2>
+</div>
+<a class="btn btn-g" href="https://2gis.ru/tomsk/search/%D0%BF%D0%BE%D0%B9%D0%B4%D0%B5%D0%BC%20%D0%B8%D0%B3%D1%80%D0%B0%D1%82%D1%8C/firm/70000001059170402/84.909914%2C56.463949/tab/reviews" target="_blank" rel="noopener">Все отзывы в 2ГИС<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
+</div>
+<div class="revs">
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>Летний лагерь в этом центре — спасение для школьников Северного парка! Походы, мастер-классы, экскурсии, квесты. Думали взять на 2 недели, а продляли уже 2 раза — ребёнок каждое утро бежит с удовольствием!</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(255, 143, 196), rgb(234, 32, 80));"><span>Е</span></span><span><span class="rv-n"><span>Екатерина</span></span><span class="rv-s"><span>о летнем лагере</span></span></span></figcaption>
+</figure>
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>Моя первоклашка провела в центре двое каникул, и ей очень нравится! Отзывчивые педагоги, всегда на связи, каждый день отчёт, фото и видео. Дети заняты полезным, а не сидят в телефоне.</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(201, 154, 216), rgb(123, 58, 147));"><span>А</span></span><span><span class="rv-n"><span>Анна</span></span><span class="rv-s"><span>о каникулах</span></span></span></figcaption>
+</figure>
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>С большой любовью рекомендую «Пойдём играть»! Старшая дочь проводила здесь каникулы, а младшая ходила к логопеду, на обучение чтению и ИЗО. Спасибо всем преподавателям!</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(253, 186, 116), rgb(234, 88, 12));"><span>И</span></span><span><span class="rv-n"><span>Инга Т.</span></span><span class="rv-s"><span>о логопеде, чтении и ИЗО</span></span></span></figcaption>
+</figure>
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>Дочка впервые пошла на летнюю площадку и в восторге. Вкусно кормят, много гуляют, есть выездные мероприятия. Педагоги действительно любят детей — это видно.</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(147, 197, 253), rgb(37, 99, 235));"><span>А</span></span><span><span class="rv-n"><span>Анжелика</span></span><span class="rv-s"><span>о летней площадке</span></span></span></figcaption>
+</figure>
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>Сын провёл в центре пять недель вместо запланированных двух — он в восторге! Мастер-классы, поездки, всё продумано отлично. Мы обязательно вернёмся.</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(110, 231, 183), rgb(5, 150, 105));"><span>И</span></span><span><span class="rv-n"><span>Инга А.</span></span><span class="rv-s"><span>о летней смене</span></span></span></figcaption>
+</figure>
+
+<figure class="rv-c glass reveal">
+<div class="q" aria-hidden="true">“</div>
+<blockquote class="rv-t"><span>Лучший центр для детей! Грамотный подход к организации досуга и правильное решение для адаптации малышей. Очень рекомендую!</span></blockquote>
+<figcaption class="rv-a"><span class="av" style="background: linear-gradient(135deg, rgb(240, 171, 252), rgb(184, 58, 140));"><span>А</span></span><span><span class="rv-n"><span>Анна С.</span></span><span class="rv-s"><span>об адаптации малышей</span></span></span></figcaption>
+</figure>
+
+</div>
+</div>
+</section>
+
+<section class="sec" id="form">
+<div class="wrap">
+<div class="lead-c glass reveal">
+<div class="blob" style="left: -120px; bottom: -160px; width: 460px; height: 460px; background: radial-gradient(circle, rgba(234, 32, 80, 0.3), rgba(234, 32, 80, 0) 68%);"></div>
+<div style="position: relative;">
+<span class="eyebrow">Подарок за заявку</span>
+<h2 class="h2">Остались вопросы? Позвоним и поможем выбрать</h2>
+<p class="sub">А ребёнку подарим «Обнимашку в кармашке» — маленького деревянного зверька, который дарит спокойствие и ощущение вашей любви, даже когда вас нет рядом.</p>
+<div class="gift" aria-hidden="true">
+<span class="hrt" style="left: 70px; top: 90px;"></span>
+<span class="hrt" style="left: 210px; top: 70px; animation-delay: -1.5s; background: rgb(192, 132, 252);"></span>
+<span class="hrt" style="left: 150px; top: 40px; animation-delay: -3s; background: rgb(255, 176, 32);"></span>
+<div class="bear">
+<span class="ear" style="left: 6px;"></span>
+<span class="ear" style="right: 6px;"></span>
+<div class="head">
+<span class="eye" style="left: 40px;"></span>
+<span class="eye" style="right: 40px;"></span>
+<span class="cheek" style="left: 20px;"></span>
+<span class="cheek" style="right: 20px;"></span>
+<span class="snout"><span class="nose"></span></span>
+</div>
+</div>
+<div class="pocket"><span class="stitch"></span></div>
+</div>
+<p class="fine">*Один ребёнок может получить подарок только один раз. Забрать его можно лично в нашем центре.</p>
+</div>
+<div style="position: relative;">
+
+<div class="form">
+<div class="fld"><label class="fl" for="f-name">Как вас зовут</label><input class="inp" id="f-name" type="text" placeholder="Имя" autocomplete="given-name"></div>
+<div class="fld"><label class="fl" for="f-tel">Телефон</label><input class="inp" id="f-tel" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></div>
+<div class="sum"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>Ребёнку: <span class="sum-b"><span>4 года</span></span><a class="sum-a" href="#picker">изменить</a></div>
+
+<button class="btn btn-p btn-wide" type="button">Перезвоните мне</button>
+<label class="chk"><input class="chk-i" type="checkbox">Хочу получать новости центра и приглашения на мероприятия</label>
+<p class="fine">Отправляя заявку, вы даёте согласие на <a href="https://poidemigrat.ru/soglasie-na-obrabotku" target="_blank" rel="noopener">обработку персональных данных</a> и соглашаетесь с <a href="https://poidemigrat.ru/privacy" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</p>
+</div>
+
+
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="ftr" id="contacts">
+<div class="wrap">
+<div class="f-grid">
+<div>
+<a class="f-logo" href="#top"><svg class="lg lg-v lg-ft f-logo-i" viewBox="4 5 3244 3971" role="img" aria-label="Пойдём играть — детский центр">
+<g class="lg-in lg-c lc0"><use href="#lgc0"></use></g><g class="lg-in lg-c lc1"><use href="#lgc1"></use></g><g class="lg-in lg-c lc2"><use href="#lgc2"></use></g><g class="lg-in lg-c lc3"><use href="#lgc3"></use></g><g class="lg-in lg-c lc4"><use href="#lgc4"></use></g><g class="lg-in lg-c lc5"><use href="#lgc5"></use></g><g class="lg-in lg-c lc6"><use href="#lgc6"></use></g><g class="lg-in lg-c lc7"><use href="#lgc7"></use></g><g class="lg-in lg-c lc8"><use href="#lgc8"></use></g>
+<g class="lg-in lg-fi lg-fi-left"><use class="lg-f lg-f-left" href="#lgf-left"></use></g><g class="lg-in lg-fi lg-fi-center"><use class="lg-f lg-f-center" href="#lgf-center"></use></g><g class="lg-in lg-fi lg-fi-right"><use class="lg-f lg-f-right" href="#lgf-right"></use></g>
+<g class="lg-in lg-li lj0"><use class="lg-l" href="#lgl1"></use></g><g class="lg-in lg-li lj1"><use class="lg-l" href="#lgl2"></use></g><g class="lg-in lg-li lj2"><use class="lg-l" href="#lgl3"></use></g><g class="lg-in lg-li lj3"><use class="lg-l" href="#lgl4"></use></g><g class="lg-in lg-li lj4"><use class="lg-l" href="#lgl5"></use></g><g class="lg-in lg-li lj5"><use class="lg-l" href="#lgl6"></use></g>
+<g class="lg-in lg-li lj6"><use class="lg-l" href="#lgl7"></use></g><g class="lg-in lg-li lj7"><use class="lg-l" href="#lgl8"></use></g><g class="lg-in lg-li lj8"><use class="lg-l" href="#lgl9"></use></g><g class="lg-in lg-li lj9"><use class="lg-l" href="#lgl10"></use></g><g class="lg-in lg-li lj10"><use class="lg-l" href="#lgl11"></use></g><g class="lg-in lg-li lj11"><use class="lg-l" href="#lgl12"></use></g>
+<g class="lg-in lg-bi"><use class="lg-br" href="#lgb"></use></g>
+</svg></a>
+<p class="f-p" style="margin-top: 20px;">Развивающие занятия, подготовка к саду и школе, логопед, продлёнка и каникулярные площадки для детей от 1 года до 10 лет.</p>
+<div class="f-soc">
+<a class="soc" href="https://vk.com/poidem_igrat" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+<a class="soc" href="https://t.me/poidemigrat" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+<a class="soc" href="https://max.ru/u/f9LHodD0cOJwVI3mhHC0VAOuNdomttBLBHhl4er_895AEfe1R9LTbH41OhI" target="_blank" rel="noopener" aria-label="Написать в MAX">MAX</a>
+</div>
+</div>
+<div>
+<h2 class="f-t">Контакты</h2>
+<div class="f-row"><img class="f-img" src="art/pin.svg" alt=""><span><span class="f-a">ул. Марины Цветаевой, 4</span><span class="f-s">г. Томск, д. Кисловка</span></span></div>
+<div class="f-row"><img class="f-img" src="art/phone.svg" alt=""><span><a class="f-a" href="tel:+79959137909">+7 995 913 79 09</a><span class="f-s">звонки и сообщения</span></span></div>
+<div class="f-row"><img class="f-img" src="art/mail.svg" alt=""><span><a class="f-a" href="mailto:poidemm.igrat@yandex.ru">poidemm.igrat@yandex.ru</a><span class="f-s">почта центра</span></span></div>
+</div>
+<div class="f-map">
+<div class="map">
+<span class="park" style="left: 6%; top: 8%; width: 130px; height: 80px;"></span>
+<span class="park" style="right: 5%; top: 14%; width: 90px; height: 64px;"></span>
+<span class="river"></span>
+<span class="pin-ring"></span>
+<span class="pin"><span class="pin-dot"></span></span>
+<div class="map-card">
+<div style="flex: 1 1 0%; min-width: 150px;"><div class="map-t">Пойдём играть</div><div class="map-s">ул. Марины Цветаевой, 4</div></div>
+<a class="btn btn-p btn-sm" href="https://2gis.ru/tomsk/search/%D0%BF%D0%BE%D0%B9%D0%B4%D0%B5%D0%BC%20%D0%B8%D0%B3%D1%80%D0%B0%D1%82%D1%8C/firm/70000001059170402/84.909914%2C56.463949" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+</div>
+</div>
+</div>
+</div>
+<div class="legal">
+<span>Детский центр «Пойдём играть» — ИП Миллер Виктория Владимировна, ОГРН 321703100031452, ИНН 701709091337</span>
+<span class="legal-l">
+<a class="legal-a" href="https://poidemigrat.ru/privacy" target="_blank" rel="noopener">Политика обработки данных</a>
+<a class="legal-a" href="https://poidemigrat.ru/oferta" target="_blank" rel="noopener">Оферта</a>
+<a class="legal-a" href="https://poidemigrat.ru/rules" target="_blank" rel="noopener">Правила центра</a>
+</span>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script type="text/x-dc-template" id="dc-tpl">
 <div class="pg {{rootCls}}" id="top">
 <svg class="lg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><path id="lgc0" fill="#FA9722" d="M1434.4 1986.9c354.9-2.6 709.7 13.2 1063 47.3 29.2 2.8 89.2 2.9 111.8 13.9 19.4 15 17.1 119.5-8 121.2-35 2.3-86.5-5.9-121.6-8.5-101.7-8.1-203.5-15.1-305.4-21.1-115.2-6-233.5-8.9-349.1-13.9-250.1-2.8-500.3 0-750.3 8.5-135 4.2-269.6 10-404.8 14.3-67.8 2.1-54.6-22.8-57.7-80.2-.6-11.7 1.6-29.9 9.9-38.5 12.9-13.3 36.4-10.1 53.3-12.4 38.1-4.7 76.4-3.6 114.5-6.4 214.5-15.1 429.4-23.1 644.4-24.2Z"></path><path id="lgc1" fill="#5CBFCC" d="M1275.5 1312.3c55.4-1.6 114.3-.6 169.9-.6h293.4s161.3 0 161.3 0c31.4 0 64.2-1.1 95.4 2.2 18.9 2 24.7 6.1 38.5 18.5 21.4 19.1 24 42.5 24.2 70.4.6 102.9.5 206.2.6 309.1l.1 100.2c0 14.9 1.5 38.2-1.2 52.4-10.9 53.4-61.7 70.2-111.2 67.3-46.2-2.8-118.5 9-155.2-27-27.1-26.6-20.5-74.1-20.2-108.8l.6-110.7c2.1-23.4 1.8-61.5-2-84-6.5-38-28.2-71.7-60-93.5-31.5-21.9-70.4-28.6-107.9-21.9-22.5 4.1-43.7 13.1-62.4 26.3-62.5 44.3-57.5 116.5-56 185.2.7 34.1 1 68.2 1 102.3.1 51-1.5 121.9-67.2 125.8-54.9 3.2-149.3 18.7-195.3-14-39.7-28.2-29.9-125.1-28.7-169.1.6-31.1.8-62.3.6-93.4-.3-81.2-5.3-163.9-1.1-245.1 3-58.1 25.3-83.7 82.7-91.6Z"></path><path id="lgc2" fill="#94B707" d="M974.6 1479.1c49.2-5 104.3-4.3 108.1 58.5 6.7 109.1 12.9 218.5 14.5 327.9.9 58-67.5 53.5-107.4 57.4-72.8 6.5-148.1 4.2-220.9 12-86.9 3.9-108.6.5-113.9-96.1-4.7-79.5-7.2-158.6-12.6-238.1.5-24.2-7.3-61.4 7.6-81.8 19.1-26.1 45.6-26.4 74.9-27 49.6-1.1 98.7-4.3 148.2-7 33.9-1.8 67.7-1.6 101.4-5.7Z"></path><path id="lgc3" fill="#9E5BB1" d="M2213.8 1486.4c67.3-1.6 135.6 9.1 202.5 15.9 45.9 4.7 118.9 6.3 160.4 22.8 14.1 5.6 22.1 12.6 27.9 26.9 4.2 10.6 4 22 3.9 33.2-.6 47.1-25.5 311.3-40.4 342.4-6.2 13-20.6 20.8-33.4 25.7-31.5 5.8-170.2-13.5-208.2-17.4-47.2-6.5-100.9-4.9-146.8-17.6-36.6-12.3-41-39.1-38.5-71.8 7.8-100.9 19-201.1 30.3-301.6 3.5-30.6 12.8-47.9 42.3-58.6Z"></path><path id="lgc4" fill="#EA2050" d="M930.5 1184.5c30.6-2.7 49.2-1.6 49.7 33.1.3 20.4 44.6 1.1 61.2 19.4 18.5 20.4 19 40.9 22 67.5 2.6 29.7 12.5 93.5-28.3 102-40.5 8.4-86.7 13.4-128.3 16.9-58.6 5-118.1 12.1-176.7 16.2-5.1.7-10.3 1.4-15.4 1.9-13 1.4-34 2.5-43.8-7.4-24.4-24.4-24.6-71.4-27.1-103.6-1.3-17-1.1-44.8 11-57.2 13.6-14 44.2-15.3 62.8-15.3-.4-10.9-2-36.4 5.5-44.2 16.1-16.4 64.8-19.2 83.6-6.1 8 5.6 9.700 28.6 10.6 37.9 20.8-2.6 44.9-3.7 66-5.1-6.3-43.8 6.9-51.5 47.3-56.1Z"></path><path id="lgc5" fill="#FA9722" d="M1675.5 1037c.5-12 .5-39.9 8.1-47.1 15.6-14.8 71.7-15.1 89-3 10.7 7.5 14.9 38.7 16.3 50.6 22.6-1.3 45.2-1.5 67.8-.4 4.3-22.7 4-32.5 18.5-51 20.8-7.8 57.6-12.6 76.8 1.2 15.6 11.2 18.9 29.1 22.3 46.7 94.5 9.8 72.8 56.3 75.2 131.8.3 8-.1 16.3-.1 24.4-1.1 30.2-24.1 49.7-53 51.7-52.6 3.5-106.1 2.4-158.8 2.4-101 .4-202.1-.1-303.1-1.4-54.9-.5-109.8-.6-164.7-.3-123.2.9-164.8 18.4-153.2-133.1 5.4-70.2 17.9-73.5 87.3-75.1 2.7-32.1 1.3-48.5 37.2-55.1 51.5-1.2 78.3-5.6 77.4 58.1 23-2 50.4-2 73.5-1.3 0-10.7.8-37.8 7.900-44.6 19.3-18.4 75.1-16.4 94.7.9 9.4 8.4 8 34.1 8 45.4 22.1-1.9 50.9-1.6 73-.8Z"></path><path id="lgc6" fill="#5CBFCC" d="M813.3 689.1c33 6.5 84.5 98.9 105.3 129.9 32.5 47.4 64 95.5 94.6 144.1 19.4 30.6 71.1 100.6 58.4 136.6-19.3 22.5-144.8 33.6-179.7 38.9-68.6 5.1-136.8 17.7-205.6 17.9-27.9.1-41.6-12.2-36-41.7 10.7-48.7 30-112.4 48.1-158.5 21.7-55.1 74.2-236.2 114.8-267.3Z"></path><path id="lgc7" fill="#EA2050" d="M1641.8 457.3c11.7 2.1 21.9 5.5 31.7 12.4 38 26.9 91.4 94.3 124.5 130.8 67.8 74.7 144.9 152.8 205.2 232.9 12.7 16.9 33.9 43.3 35.7 64.7.5 5.4-2 8.9-5.8 12.5-37.9 37-314 21.1-377.7 19.6l-174.7-.2c-51.4-.1-159.1 6.4-204.3-11-8-3.1-17.8-7.7-21-16.3-2.5-6.6-.3-13.5 2.2-19.7 20.6-52.1 158.1-195.8 201.3-243.5 45.6-50.4 90.2-103.8 139.7-150.3 12.8-12 26.8-24.9 43.1-31.9Z"></path><path id="lgc8" fill="#94B707" d="M2432.9 977.7c7.5 3.1 18.6 10.4 22.7 17.1 26.4 43.3 48.1 102.2 67.2 148.9 30.5 75.4 63.9 150.3 88.4 227.9 3.9 13.3 14.6 54.6-.7 63.5-23 13.3-69.3 11.2-95.3 10.2-42.1-1.6-85.7-4.5-127.3-9.2-50.6-3.2-104.6-4-154.3-14-13.7-2.8-35-8.9-42.3-21.8-4.4-7.7-2.2-20.9-.4-29.2 11.2-50 161.8-301.4 200.3-352.4 12.2-16.2 24.3-30.2 41.6-41Z"></path><path id="lgf-left" fill="#FA9722" d="M797.5 421.3c42.1 13 180.4 114.6 212.3 151.5 6.6 7.6 11.2 15.7 9.9 26.5-4.3 7-2.3 4.7-11.1 8.4-43.8 8.8-175.1 10.5-216.1-13.8-8.4-35.2-10.3-140.5 4.9-172.7Z"></path><path id="lgf-center" fill="#9E5BB1" d="M1638.6 65.7c7.7-.6 15.4-.5 22.9 1.5 61.9 16.6 346.5 232.2 378.8 287.8 3 5.2 5.5 10.3 3.5 16.3-3.4 10.8-21 16.6-30.2 20.8-68.2 15.3-164.3 8.2-233.8 5.3-51.3-2.2-156.5 8.3-159.700-60.1-2.4-51.4-18.2-238.5 18.5-271.6Z"></path><path id="lgf-right" fill="#EA2050" d="M2433.9 745c10.7 3.1 29.6 11.3 38.7 16.8 28.5 17.1 191.7 125.7 184 158.5-3.6 5.2-8 6.4-13.9 9.1-54.6 7.8-142 7.3-195.8-4-36.6-7.7-23.5-152.2-13-180.3Z"></path><path id="lgl1" fill="#9E5BB1" d="M484 2318c5.4-1.4 3-1.7 7.6.5 18.4 116.3 32.5 234.9 50.6 351.4 7.5 48.5 11.8 108.5 22.6 154.7-4.6 2-9.3 3.9-14.1 5.5-30.6 10.6-107.6 30.1-136 16.4-8.2-8.5-12-33.8-13.4-45.7-12.8-108.6-36.7-219.5-44.7-328.3-38.7 2-81.4 8.8-116 10.2 5.6 50.2 10.7 95.4 17.8 145.5 10.4 79.7 24.1 155.2 33.2 236.8-58.5 21-96.2 21.4-156.8 22-6.4-58.2-16.3-121.3-24.5-179.7l-45.8-332.3c88.5-11.5 176.9-23.4 265.2-35.8 46.4-6.6 110.2-18.5 154.3-21.2Z"></path><path id="lgl2" fill="#EA2050" d="M795.4 2286.9c56.4-6.3 116.6 13.5 160.6 49 61.1 49.3 82 126.8 90.3 201.4 17.9 160.8-54.8 277.6-222.4 293.2-162.9 7-243.3-100.8-258.1-253.6-15.7-161.7 64.2-274.7 229.7-290ZM825.4 2684.8c27-10.1 44.4-21.4 56-48.8 30.4-71.6 8.2-211.3-92.8-204.5-79.2 26.5-78.2 115.9-58.5 185.2 13.2 46.4 45.700 71.9 95.3 68.1Z"></path><g id="lgl3" fill="#9E5BB1"><path d="M1423.8 2287c26.4-3 76.4.4 102.7 4.4 3.7 22.1 3.6 57.4 3.8 80.6.2 34.6.7 69.3 1.4 103.9.6 29.6 11.5 325.7 2.5 330.9-23.4 13.4-120.3 6.7-154.4 2.6-1.9-43-.8-86.5-2.1-129.5-1.2-41-3.9-82.4-6-123.5-51.3 69.3-84.9 173.3-116.6 254.1-19.4 6.5-40 7.6-60.6 10.9-39.6 3.2-62.3.7-100.5-5.1-12.6-81.9-7.1-150.2-9.4-231.7-2.7-94.2-6.3-185.8-4.9-280.4 42.5-10.4 113.4-17.1 154.5-3.3 8.2 34.9 6.1 86.3 6.5 123.7.5 43.6 2.4 89.7 1.9 133.1 42-84.2 71.3-179.8 121.5-259.2 17.9-7.2 40.7-9.9 59.8-11.5Z"></path><path d="M1353.2 2199.7c21.3 2 26.4 4.9 45.8 14.9-11.6 19-60.1 76.4-77.5 99.4-16-1.8-36.6-19-42.3-33.9.1-25.5 46.6-75.7 74-80.5Z"></path></g><path id="lgl4" fill="#FA9722" d="M1722.8 2278.9c115.8-3.6 250.4 4.3 366.9 7 .8 13.3.9 26.6.4 40-2.5 65-1.7 130.1-3.6 195.2-1.4 49.9-4.2 98.9-2.6 148.8 24.5-.8 46.7.7 71 2.9 1.2 66.6-2.7 117.6-4.4 182.8-64.4 9.5-80.7 6.1-144.2.3l-2.7-41.1.1-5.4c-8.5-6.2-246.7-4.5-281-7.3.1 9.7 1.7 38.6-7.9 42.8-36.4 15.9-105.2 4.9-141.7-.5-.4-49.9-2.6-138.9 2.5-186.5 20.3 2.2 46.6 2.7 67.5 3.7 9.2-16.3 22.7-40 28.5-57.5 27.8-84 30.6-177 43.3-264.3 2.8-19.1 3.9-40.9 7.6-59.1l.3-1.7ZM1805.8 2664.1c20.9-1.2 45.6-.2 66.8.2 18.4 1.2 34.6 1.7 53.1 1.9-2.2-76.8 3.2-167.1 2.8-246.6-20.8-.4-40.6-.7-61.3-1.9-8.1 54-14.2 113.9-28.3 166.1-6.2 22.7-22.8 58.1-33.2 80.2Z"></path><g id="lgl5" fill="#9E5BB1"><path d="M2221.6 2316.7c53.9-.2 110 6.6 164.1 9.3 16.9.9 120.4.9 126.9 13.3 14.1 27 .2 94.1-5.2 124.6l-150-9.8c-2.1 29.5-3.9 53.4-4.4 83.2 104.6-3.1 129.1-3.4 99.8 111.3-19.3-.5-92.1-1.2-108-4.4-.1 11.8-1.7 72.2 1.1 80.9l10.2.7c43.9 1.4 89.5 5.2 133.6 7.5 4.2 55.7 12.4 72.8-8.7 126.9-43.5-2.4-255.9-8.4-282.4-22.1-13.9-20.6-.5-158 2.1-192.2 8.3-108.8 11-220.9 20.9-329.3Z"></path><path d="M2294.6 2251.6c23 2.1 70.5-1.6 52.1 38.7-4.2 9.3-7.9 10.3-17.5 13.7-36.8-.7-85.6-24-34.6-52.4Z"></path><path d="M2402 2261.3c15.4 1.1 46.9-2.4 55.9 10.4 10.1 14.3 3.5 28.8-9.1 37.6-15.3 1-30.9-.1-45.7-4-21.9-5.7-20.4-36.5-1-44Z"></path></g><path id="lgl6" fill="#9E5BB1" d="M2629.8 2364.3c53.2-4.4 145.6 4.3 189.9 33.2 6.3 37.5 15.7 76.7 23.5 114.2 8.8 42.4 17.8 91.9 31.2 132.5 38.5-44.9 58.2-118.9 85.3-171.6 6.2-12.1 24.2-56.2 37.9-58.9 41.7-8.1 96.1 1.5 137.9 10 21.3 5 37.8 12 53.8 18.3-1.3 40.4-10.6 112.1-14.3 155.3l-28.6 348.9c-64.8 3-81.8 2.4-144.5-14.9.1-11.1.8-23.9 1.9-34.9 7-72 11-144.7 18.7-216.6 3.3-12.1 2.9-45.9 2.6-58.9-29.1 35.6-42.3 81.4-61.4 123-25.1 54.6-48.9 119.1-75.8 172.1-33.4 1.3-62.7-3.2-95.1-10.3-9.7-45.1-16.9-106.2-25.2-153.9-8.4-48.5-24.5-125-28.8-172.3-30.2 99-34.9 198.3-57.8 298-.9 3.8-10.4 8.8-13.9 9.5-40.4 8.7-88.7-4.2-125-22.2.1-2.2.3-4.3.5-6.5 2.5-29.6 10.1-68.7 15.1-98.5l21.9-135.7c9.3-59 19.2-117.8 29.5-176.6 4.3-23.9 8.6-48.7 13.5-72.5 1.5-7.3 2-6.5 7.3-11Z"></path><path id="lgl7" fill="#9E5BB1" d="M764.6 2937.9c14.1-1.9 45.5.9 59.9 2.3 5 78.3 22 178.3 31.8 257.5 9.5 76.5 17.6 174.6 32.7 247.5-62.1 22.1-94 21.8-158.2 21.3-8.2-52.8-13.1-110.8-20.7-164.1-4.1-28.8-3.8-60.7-11.6-89.2-35.2 44-57.8 147.1-74.5 202.8-4.4 14.6-11.2 50.1-19.8 60.5-17.4 20.9-84.1 26.2-109.2 29.5-13.6 1.5-36.8 1-51.2 1.1-6.5-45.7-11.3-94.1-17.3-140.3l-28.7-211c-6.9-53.3-12.8-106.1-21.2-159.2 42.6-14.8 110.8-27.9 155-19.4 8.7 23.5 10.4 60.2 14.1 85.7 8 54.8 12.8 120.5 26 173.4 10.2-46.6 63-239.5 89.2-270.6 19.2-22.8 75.5-25 103.8-27.9Z"></path><path id="lgl8" fill="#9E5BB1" d="M1190.7 2934.4c19.9-.5 39.9-.7 59.8-.8 10.2 44.1 7 96.3 6.4 142.1-49.8.9-104.3 1.1-153.8 4.8 9.2 76.3-.1 165.8 7.6 243.6 2 20.1 5.7 111.5.5 126.4-17.1 12.2-74 13-96.8 13.1-19.9-1.2-41.3-2-60.5-6.9-2.6-112.8-6.3-225.5-11-338.2-1.9-57-1.1-119.8-4.5-175.8 20.5-3 60.3-3.5 82.5-4.3 56.6-2.3 113.2-3.6 169.9-4Z"></path><path id="lgl9" fill="#5CBFCC" d="M1330.4 2924.4c20.8-.6 44.6-.3 65.3.6 65.4 2.9 177.3-3.6 226.9 46.7 113.7 115.1 34.1 323.1-132.8 328.1-15.2 2.2-25.3 3.6-40.9 4 .5 26.2 1.4 120.3-7.7 139.5-9.2 8.4-53 9.6-68.1 9.7-57.1.4-70.9 1.3-69-56.7 5-155.2 3.3-309.3 13.3-463.8.3-3.9 9.9-6.8 12.9-8.1ZM1453.2 3179.2c23.5-2.2 39.8-1.4 58.4-17.4 23.3-32.9 29.3-73.2-3-103-21.2-5.1-33-5.8-54.9-5.5 0 40.5.3 85.6-.5 125.8Z"></path><path id="lgl10" fill="#9E5BB1" d="M1783.2 2941.8c53.6-2.5 142.1-1.4 195.6 1.9 6.3 21.9 12.1 44.7 17.1 67 34.3 152.2 72.2 303.6 106.2 455.9-13.2 1.6-27.2 2.1-40.5 2.6-103.1 4-112.9 11.3-132.5-92.5l-5.1-26.9c-41.5.1-87.7 1-128.6-2-6.4 35.7-12.8 95.5-48.5 112.1-28.4 13.2-85.3 4.8-114.2-5.1 10.6-41.1 24.3-84.2 36-125.3l52.9-188.4c17.4-61.1 33.5-123.4 52.1-184.1 2-6.6 4.3-10.8 9.7-15.1ZM1819.3 3256.9l39.6.1 43.8-.1c-8.7-25.6-26.6-153.8-37.4-163.5-19.3 53.3-34.7 107.9-46.1 163.4Z"></path><path id="lgl11" fill="#94B707" d="M2140.4 2944.9c19-.1 48.6 3.3 68.3 5 36.5 2.8 72.9 5.8 109.4 9 48.6 4.2 117 7 162.5 14.1 3.9 28.5 5.1 57.3 3.7 86-3.4 58.9-42 45.9-85.3 45.3-10.2-.1-20.8-1.1-30.8-2.4.8 94.1-18.5 209-21.9 304.7-1.6 28.1-5.9 56.1-7.5 85.7-64.3-.1-83.6-1.9-145.8-12.1.4-37.4 4.9-78.4 8.3-116.1 8.2-90.4 12.1-185.2 21.5-275.3-23.8-2.8-87.1.5-98.4-15.8-17.9-25.7-9-107.5 16.2-128.1Z"></path><path id="lgl12" fill="#9E5BB1" d="M2554.1 2994.1c60.2-5.1 97.8.8 154.9 17.5-5.2 52.2-13.6 100.5-17 153.8 2.5.1 5 .3 7.5.5 63.5 5.7 137.9 8.7 179.9 61.1 31.8 39.8 37.6 90.4 32.6 139.3-6.3 62.7-18.9 102.7-68 143.4-58.4 42.2-141.3 21.9-209 14.2-47.6-5.6-95.3-10.9-143-15.9l41.3-358.7 11.8-102.4c1.2-10.6 3.8-45.8 8.9-52.7ZM2668 3398.7c16.4 1.7 50.5 6.5 64.2-.7 18.1-21.3 19.5-40 18.5-67-1.4-39.1-41.1-40.7-71-41.4-6 38-9.9 70.7-11.8 109.2Z"></path><g id="lgb" fill="#9E5BB1"><path d="M558.2 3672.4l106.9-.4c-.5 55.6-2.1 110.3.9 166 5.7 2.5 7.6 3.5 12.9 6.7 5.3 14.5 7.5 59.3-7.9 69.6-23.5 1.8-18.1-29.1-17.8-45.2-9.9.7-24.2.1-34.5-.1-32.4-.2-65.3.3-97.7.5.8 11.2 3.7 29.8-3.5 39.1-4.8 6.1-19.1 8.4-24.7 2.4-2.8-12.1-5.4-52.3-.9-62.8 5.5-5.6 10.8-6.3 18.4-8.6 21.2-48.5 20-114.5 18.2-166.8 9.6.2 20.1-.1 29.8-.2ZM549.7 3839.1c23.9-1.1 47.2-.3 70.9-.9l4.5-.8c4.6-11.1 1.5-114.7 1.1-133.6-19.9 0-41.2.5-61.1.1 2 42.7-6.2 93.5-15.5 135.2Z"></path><path d="M2713 3672.6c17.6-1.1 39.8-.1 58.8-1.5 63.4-4.7 117 37.5 72.3 101.1-14.7 20.9-54.1 19.6-80.7 20.2-5.8-.2-7.5-.1-13.3.6-2.2 4.5-3.4 67.9-3.9 78.8-9.4.6-22.5 1.3-31.3-1.6-6.9-8.9-3.9-97.9-4.6-115.8-.5-11.9-2.5-74.3 2.8-81.9ZM2811.5 3751.5c35.5-49.7-33-46.3-61.8-48.4 1.1 19.6 1 38.1.9 57.7 21.2-3.3 41.9-.6 60.8-9.3Z"></path><path d="M1656.5 3671.8l33.3-.6c-2.5 34.3-1.3 103.6 1.8 136.5 14.4-24.8 34.9-52.3 50.4-77.3 7.8-12.7 27.1-47.4 34.7-55.9 10.1-3.5 24.2-2.4 35.5-2.4 2.1 30.2 1.2 65.7.9 96.2-.2 31.3.2 66.8-1.9 97.7-6.8 6.1-22.9 4.5-32.2 4.3-3.1-38.7.3-86.4-1.7-128.4-30.8 32.300-60.2 88.1-84.9 126.7-14.2 2.1-21.4 1.9-36 1.7-2.4-39.8-.4-84.8-1.3-125.2-.3-14.3-.9-62.5 1.4-73.4Z"></path><path d="M2058.3 3671.4l34.8.3c3.2 29.4 2.1 77.9 2.2 108.8.2 15.6-2.5 44 1.5 59.2.5 1.9 6.4 3.1 9.1 4 7.8 9 4.7 54.8 4.5 69.4l-28.2-.8.8-42.1c-48.1.2-94.9-.2-143.1.9-3-31.9-2.1-68.5-1.8-100.7.3-30.4-1.1-64.8.5-94.8 4.7-3.9 3.8-2.6 11.4-3l24.5-1.1c1.4 43 3.6 127.8.8 169.7 29.8 1.6 52.4 1.4 82.1-1.2 1.1-56.2 1.4-112.3.8-168.5Z"></path><path d="M1489.5 3804.1c32.1-39.8 53.3-84.9 82.3-126.3 5.2-7.4 26.3-6.1 35.1-6.2 1.2 48.9 2.4 142.6.6 195.9-.9 1-1.9 2-2.8 3l-7.8-.1c-9.6-.3-12 1-19.6-3.5-5.8-18.9-.7-92.5-5.7-125.4-34 39.7-54.7 86.2-84.3 128.1-8.9 1.2-23.5 1.6-32.9 2-3.4-50.6-2.9-141.8-1.4-194.2 3.7-5.1 2.5-3.4 10.9-4.9 5.3-.2 13.8-1.4 18.5 1.2 3.8 2.1 1.7 92.7 2.6 105.7.6 8.4 2.5 16.6 4.6 24.7Z"></path><path d="M2453.2 3673.2l36.9-2c.7 51.5.9 142.3-.6 197-1 1.2-2 2.3-3 3.5-9.8-.3-20.4.3-29-3.7-7.6-12.4-4.4-70.3-4-87.1-17.6 1.3-67.3.7-84.8-.8.4 27.5.9 62.2-1.8 89.1-12 1.1-21 1-33.1.9-1.5-18.9-3.1-190.2 1.7-197.7 10.8-.5 23-.3 33.9-.4.5 26-.4 54.6-.7 80.8 28.7-.6 57.4-.8 86.1-.7-1.9-19.2-1.2-58.3-1.6-79Z"></path><path d="M2148.3 3672.2c45.4 1.2 93.8.1 139.3-.7l1 30.1c-27.7-.1-84.1 2.1-108.8-.7.9 16.8 1 34.5 1.4 51.3 24.6-2.3 73.5-.9 99.7-.9l.2 28.7-97.3.3-2.4.1-2.1 2.6c-.6 21.4.2 35.6 4.9 56.3 26.5 5 81.6 2.7 110.6 2.3l-.7 29.3c-39.3-3.1-109-1.8-149.4.3l-.1-1.9c-2.4-41.3-.3-146.9.2-193.1 1.2-1.3 2.4-2.7 3.6-4Z"></path><path d="M717.4 3672.4c45.8.6 93.9 1.2 139.5-1l1 30c-29.5-.3-79.9 2.8-107.5-.9 1.6 14.5 1.1 37 1.3 52.1 33.2-1.3 67.9-1.1 101.2-1.4l-.7 28.5-90.9.4c-3.8-.1-4.8.1-8.6.5-5.3 8.4-2.5 49.3-2.2 62.1 34.7-1.6 78.2-.7 113.5-.8-.1 9-.8 19-1.1 28.1-44.6-2-102.8-1.3-147.9-.2-2.3-51.9 1.3-138.5.2-193.5.8-1.3 1.6-2.6 2.3-4Z"></path><path d="M1289.8 3672.4l25.6-1c-.1 11.5-3.3 84.2 5.2 85.3 39 3.6 31-63.1 60.4-76.7 10.4-4.8 35.2-10.4 41.3 2.2-3.8 15.5-21.9 15-28 22.4-20.3 24.5-15.8 39.7-40.4 65.2 29.9 17.9 38.8 42.5 54.3 73.1l13.6 27.3c-12.9.3-23.7.1-36.7-.4-13.8-19.4-35.4-76.3-58.3-90.4-2-1.2-3.3.3-6 1.8-8.9 16.5-5.7 68.2-5.5 89.7-10.5-1.1-23.4-.9-34.1-1.1-2-51.3-1-102.1-1.4-153.4-.1-13.1-.5-26.4.1-39.5 4.2-4.9 2.1-3.4 9.9-4.5Z"></path><path d="M1151.9 3669.9c31.6-2.5 56.8 9.3 76.8 34.6 3.8 4.8 3.4 10.2 1.9 15.7-4.5 6.2-11.4 7.2-19.1 9.7-17.9-17-28-34.2-56.4-32.5-71.5 4.1-68.7 154.4 7.4 147.8 15.1-1.3 26.1-13 34.6-24.1l9.7-19.6 12.1 4.2c9.4 3.1 13.6 2.9 15.8 13.1-7.8 25.1-33.5 47.2-59.2 52.3-22.4 4.5-45.6-.2-64.4-13.1-60.9-42-56.6-157.6 18-182.7 7.5-2.5 15-3.9 22.8-5.3Z"></path><path d="M2525 3672.3c50.5.4 104.1-.4 154.7-.9-.9 9.7-.6 19.7-.6 29.4-20.1.1-40.2 0-60.3-.3 3 21.3 1.3 87.3 1.3 111.5l.1 59.5-37.7-.7c-3.3-39.3-1.4-128.6-.8-170.2-24-.1-74.5 11-56.8-28.4Z"></path><path d="M891.9 3671.8c27.2 1.2 133.3-4.2 149.5 4 18.3 32-41 25-56.6 24.6 2.1 25 .6 85.8.8 114.2-.1 41.3 11.7 53.9-35.9 56-1.6-52.9-.5-116.3 0-169.6-13.8-.3-27.1 1-40.7.8-23.4-.3-20.4-14.4-17.1-30Z"></path><path d="M1697.9 3616c6.1 3.6 13.7 11.2 20.9 15.4 27.2 16 39.1-10.8 50.9-14.1l1.7 2-1.2 6.2c-13.4 15.8-16.8 16.8-36.3 24.1-19.2-5.7-36.3-9.9-36-33.6Z"></path></g></defs></svg>
 <sc-if value="{{showIntro}}" hint-placeholder-val="{{ false }}"><button class="splash" type="button" aria-label="Пропустить заставку" onClick="{{skipIntro}}"><span class="sp-glow"></span><svg class="lg lg-v lg-sp" viewBox="4 5 3244 3971" aria-hidden="true" focusable="false">
@@ -683,6 +1701,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="blob" style="right: -180px; top: -80px; width: 680px; height: 680px; background: radial-gradient(circle, rgba(176,124,196,.4), rgba(176,124,196,0) 68%); animation-delay: -8s"></div>
 <div class="blob" style="right: 18%; top: 560px; width: 440px; height: 440px; background: radial-gradient(circle, rgba(250,151,34,.4), rgba(250,151,34,0) 68%); animation-delay: -14s"></div>
 
+<a class="skip" href="#main">Перейти к содержанию</a>
 <div class="promo">
 <span>А у нас уже продаются билеты на новогодние ёлки!</span>
 <a class="promo-a" href="https://poidemigrat.ru/new-year-2027" target="_blank" rel="noopener">Смотреть программы</a>
@@ -707,16 +1726,37 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <div class="hdr-r">
 <a class="tel" href="tel:+79959137909">+7 995 913 79 09</a>
 <a class="btn btn-p btn-sm" href="#form"><span class="hide-sm">Заказать звонок</span><span class="only-sm">Записаться</span></a>
+<button class="burger {{menuCls}}" type="button" aria-label="{{menuLabel}}" aria-expanded="{{menuOpen}}" aria-controls="mnav" onClick="{{toggleMenu}}"><span class="bg-l"></span><span class="bg-l"></span><span class="bg-l"></span></button>
 </div>
+</div>
+<div class="mnav {{menuCls}}" id="mnav">
+<button class="mnav-bg" type="button" aria-label="Закрыть меню" tabindex="-1" onClick="{{closeMenu}}"></button>
+<nav class="mnav-in" aria-label="Меню">
+<a class="ml" href="#picker" onClick="{{menuSelf}}"><img class="ml-i" src="art/blocks.svg" alt=""><span class="ml-t">Занятия<span class="ml-s">подбор по возрасту и задачам</span></span></a>
+<a class="ml" href="#picker" onClick="{{menuQuiz}}"><img class="ml-i" src="art/wand.svg" alt=""><span class="ml-t">Анкета<span class="ml-s">5 вопросов — подберём за вас</span></span></a>
+<a class="ml" href="https://poidemigrat.ru/raspisanie" target="_blank" rel="noopener" onClick="{{closeMenu}}"><img class="ml-i" src="art/calendar.svg" alt=""><span class="ml-t">Расписание<span class="ml-s">все группы и время занятий</span></span></a>
+<a class="ml" href="#team" onClick="{{closeMenu}}"><img class="ml-i" src="art/apple.svg" alt=""><span class="ml-t">Педагоги<span class="ml-s">14 специалистов центра</span></span></a>
+<a class="ml" href="#about" onClick="{{closeMenu}}"><img class="ml-i" src="art/sun.svg" alt=""><span class="ml-t">О центре<span class="ml-s">живые фото и отзывы родителей</span></span></a>
+<a class="ml" href="#contacts" onClick="{{closeMenu}}"><img class="ml-i" src="art/pin.svg" alt=""><span class="ml-t">Контакты<span class="ml-s">Северный парк, ул. Марины Цветаевой, 4</span></span></a>
+<div class="mnav-f">
+<a class="mnav-tel" href="tel:+79959137909">+7 995 913 79 09</a>
+<a class="btn btn-p btn-sm" href="#form" onClick="{{closeMenu}}">Заказать звонок</a>
+<div class="mnav-soc">
+<a class="ms" href="https://vk.com/poidem_igrat" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+<a class="ms" href="https://t.me/poidemigrat" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+<a class="ms" href="https://max.ru/u/f9LHodD0cOJwVI3mhHC0VAOuNdomttBLBHhl4er_895AEfe1R9LTbH41OhI" target="_blank" rel="noopener" aria-label="Написать в MAX">MAX</a>
+</div>
+</div>
+</nav>
 </div>
 </header>
 
+<main id="main">
 <section class="wrap hero">
 <div style="position: relative">
 <img class="sh-deco" src="art/d_star.svg" alt="" style="left: 430px; top: 64px; width: 48px">
 <img class="sh-deco" src="art/d_sparkle.svg" alt="" style="left: 482px; top: 196px; width: 32px; animation-delay: -2.5s">
-<div class="pill glass enter"><span class="pulse"></span>Детский центр в Томске · с 2021 года</div>
-<h1 class="h1 enter" style="animation-delay: 80ms"><span class="h1-l">Пойдём</span><span class="h1-l h1-l2">играть!</span></h1>
+<h1 class="h1-wrap"><span class="pill glass enter"><span class="pulse"></span>Детский развивающий центр в Томске<span class="pill-y"> · с 2021 года</span></span><span class="h1 enter" style="animation-delay: 80ms"><span class="h1-l">Пойдём</span><span class="h1-l h1-l2">играть!</span></span></h1>
 <p class="lead enter" style="animation-delay: 160ms">Развивающие занятия для детей от 1 года до 10 лет — для успевающих родителей, которые хотят воспитать самостоятельных детей.</p>
 <div class="qa-wrap enter" style="animation-delay: 240ms">
 <div class="hero-masc" aria-hidden="true"><span class="bubble hand">начните отсюда!</span><img class="hm-img" src="art/m_point.svg" alt="" width="108" height="125"></div>
@@ -1103,6 +2143,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 </div>
 <div class="bento">
 <a class="bt bt-ny reveal" href="https://poidemigrat.ru/new-year-2027" target="_blank" rel="noopener">
+<img class="ny-bg" src="photos/ny-banner.jpg" alt="" loading="lazy">
 <span class="snow" style="left: 6%; width: 6px; height: 6px; animation-duration: 7s; animation-delay: -1s"></span>
 <span class="snow" style="left: 14%; width: 4px; height: 4px; animation-duration: 9s; animation-delay: -5s"></span>
 <span class="snow" style="left: 22%; width: 8px; height: 8px; animation-duration: 8s; animation-delay: -3s"></span>
@@ -1116,32 +2157,8 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 <span class="snow" style="left: 89%; width: 6px; height: 6px; animation-duration: 10s; animation-delay: -8s"></span>
 <span class="tag" style="background: rgba(255,255,255,.16); color: #fff">Билеты уже в продаже</span>
 <h3 class="bt-h" style="font-size: 46px; max-width: 380px">Новогодние ёлки</h3>
-<p class="bt-p" style="max-width: 330px; color: rgba(255,255,255,.9)">Волшебные интерактивные представления, встречи со сказочными героями и подарки от Дедушки Мороза.</p>
-<span class="bt-go">Смотреть программы<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
-<span class="tree" aria-hidden="true">
-<span class="tr-t" style="left: 55px; top: 34px; width: 110px; height: 86px"></span>
-<span class="tr-t" style="left: 30px; top: 84px; width: 160px; height: 106px"></span>
-<span class="tr-t" style="left: 0; top: 146px; width: 220px; height: 126px"></span>
-<span class="tr-trunk"></span>
-<span class="tr-star"></span>
-<span class="lt" style="left: 104px; top: 70px; background: #FFE27A"></span>
-<span class="lt" style="left: 80px; top: 136px; background: #FF7EB6; animation-delay: -.4s"></span>
-<span class="lt" style="left: 132px; top: 160px; background: #93C5FD; animation-delay: -.8s"></span>
-<span class="lt" style="left: 60px; top: 214px; background: #FFE27A; animation-delay: -1.2s"></span>
-<span class="lt" style="left: 116px; top: 226px; background: #E2C6EC; animation-delay: -.2s"></span>
-<span class="lt" style="left: 168px; top: 244px; background: #FF7EB6; animation-delay: -.6s"></span>
-<span class="lt" style="left: 34px; top: 252px; background: #93C5FD; animation-delay: -1s"></span>
-<span class="gift3" style="left: -58px; top: 246px"><span class="g3" style="width: 48px; height: 48px">
-<span class="g3-t" style="width: 48px; height: 48px; background: #F43F5E linear-gradient(90deg, transparent 40%, #FFD54A 40%, #FFD54A 60%, transparent 60%); transform: rotateX(90deg) translateZ(24px)"></span>
-<span class="g3-r" style="width: 48px; height: 48px; background: #F43F5E linear-gradient(90deg, transparent 40%, #FFD54A 40%, #FFD54A 60%, transparent 60%); transform: rotateY(90deg) translateZ(24px)"></span>
-<span class="g3-f" style="width: 48px; height: 48px; background: #F43F5E linear-gradient(90deg, transparent 40%, #FFD54A 40%, #FFD54A 60%, transparent 60%); transform: translateZ(24px)"></span>
-</span></span>
-<span class="gift3" style="left: 200px; top: 262px"><span class="g3" style="width: 36px; height: 36px">
-<span class="g3-t" style="width: 36px; height: 36px; background: #3B82F6 linear-gradient(90deg, transparent 40%, #fff 40%, #fff 60%, transparent 60%); transform: rotateX(90deg) translateZ(18px)"></span>
-<span class="g3-r" style="width: 36px; height: 36px; background: #3B82F6 linear-gradient(90deg, transparent 40%, #fff 40%, #fff 60%, transparent 60%); transform: rotateY(90deg) translateZ(18px)"></span>
-<span class="g3-f" style="width: 36px; height: 36px; background: #3B82F6 linear-gradient(90deg, transparent 40%, #fff 40%, #fff 60%, transparent 60%); transform: translateZ(18px)"></span>
-</span></span>
-</span>
+<p class="bt-p" style="max-width: 255px; color: rgba(255,255,255,.92)">Волшебные интерактивные представления, встречи со сказочными героями и подарки от Дедушки Мороза.</p>
+<span class="bt-go ny-go">Смотреть программы<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6"></path></svg></span>
 </a>
 <a class="bt bt-set glass reveal" href="#picker" onClick="{{goSelf}}">
 <span class="tag" style="background: #F3E6F7; color: #5B2967">Открыт набор</span>
@@ -1337,6 +2354,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 </div>
 </div>
 </section>
+</main>
 
 <footer class="ftr" id="contacts">
 <div class="wrap">
@@ -1387,7 +2405,7 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
 </div>
 </footer>
 </div>
-</template>
+</script>
 <script src="https://cdn.jsdelivr.net/npm/preact@10.24.3/dist/preact.umd.js"></script>
 <script>
 (function () {
@@ -1453,7 +2471,9 @@ a{color:#7B3A93}a:hover{color:#B83A8C}
     }
     out.push(h(tag, props, kids(n.childNodes, sc, [])));
   }
-  var TPL = document.getElementById('dc-tpl').content;
+  var T = document.createElement('template');
+  T.innerHTML = document.getElementById('dc-tpl').textContent;
+  var TPL = T.content;
   window.DCLogic = class extends P.Component {
     render() { return kids(TPL.childNodes, [this.renderVals() || {}], []); }
   };
@@ -2003,6 +3023,11 @@ class Component extends DCLogic {
     const isSelf = s.mode !== 'quiz';
 
     return {
+      menuCls: s.menuOpen ? 'open' : '', menuOpen: !!s.menuOpen, menuLabel: s.menuOpen ? 'Закрыть меню' : 'Открыть меню',
+      toggleMenu: () => this.setState((st) => ({ menuOpen: !st.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      menuSelf: () => { this.setState({ menuOpen: false }); this.setMode('self'); },
+      menuQuiz: () => { this.setState({ menuOpen: false }); this.setMode('quiz'); },
       rootCls: fontCls + ' ' + glassCls + (this.props.motion === false ? ' still' : '') + (this.props.intro !== false && this.props.motion !== false ? ' intro' : ''),
       showIntro: this.props.intro !== false && this.props.motion !== false && !s.introOff,
       skipIntro: () => this.setState({ introOff: true }),
